@@ -8,15 +8,20 @@ Welcome to Platipy's documentation!
 
 Contents:
 
+Testing
+
 .. toctree::
    :maxdepth: 2
 
+   intro
+   pythonista
+   pygame_and_spyral
 
 
-Indices and tables
-==================
+..    Indices and tables
+    ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    * :ref:`genindex`
+    * :ref:`modindex`
+    * :ref:`search`
 
