@@ -13,6 +13,20 @@ The OLPC XO
 Sugar and Activities
 --------------------
 
+Sugar is the user interface of the XO laptop. It is designed very differently from traditional systems like Windows or OS X. Built on Fedora, there are several concepts unique to the system that you should understand before designing for it.
+
+Key Concepts
+~~~~~~~~~~~~
+
+Activities
+  Basically, an application or program. Activities are meant to be used by humans. When they run, they take up the whole screen, and it is expected that you only use one Activity at a time.
+Views
+  There are three "Views" on the XO: "Home", "Neighborhood", "Group". The **Home View** is a listing of all the Activities available on the XO. The **Neighborhood View** is a list of all the visible networks you can connect to. You will never use the **Group View**. You can switch between Views by using the buttons in the top-left of the Frame.
+Frame
+  If you hold your mouse in the corner of the screen (or press the black rectangle in the top-right corner of your keyboard), the Frame will appear. On the top bar, there are buttons to switch between the Views and running Activites. On the bottom, you can see currently connected networks, USB drives, and other system information.
+Journal
+  A record of activity on the XO. When you start an Activity, an entry is added to the journal. When you download a file, it is stored in the journal. When you resume a stopped Activity, its state is restored from the journal.
+
 Important Built-in Activities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -37,6 +51,17 @@ Maze
   The maze is a fun little activity where you guide a shape out of a maze. Everytime you complete a level, a larger one is generated. For some reason, people love the Maze a lot, and it makes for a good distraction.
 
 If you're interested in more activities, there are a large number of them at the `Sugar Activity Repository <http://activities.sugarlabs.org//en-US/sugar/>`_.
+
+Connecting to the Internet
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+To get internet access, go to the Neighborhood (in the top-left of the Frame). You should see a bunch of circles. If you hover over these circles, you can see that they represent available networks. Choose your network, and if prompted, put in your passphrase.
+
+If you have problems connecting, try some of these fixes.
+  * Give the XO a few minutes after you've reached the home screen. Sometimes it just takes a bit of time to get itself oriented.
+  * Keep the "ears" (the little swiveling bars on the XO that cover the USB ports) upwards. That's where the wifi antennae are.
+  * Try removing your network history. Right click the XO symbol on the Home View, choose "Control Panel", and go to "Network". There should be a button that promises to "Discard network history". Don't worry if clicking it doesn't appear to do anything. It's a silent fix. Just try connecting again.
+  * Smack your XO until you feel better.
+  * Try the stuff on `this page <http://wiki.laptop.org/go/Wifi_Connectivity#Special_Considerations>`_.
 
 Pygame and Spyral
 -----------------
