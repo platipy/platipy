@@ -1,3 +1,5 @@
+.. _targetting-xo:
+
 Targetting the OLPC XO
 ======================
 
@@ -9,6 +11,8 @@ Guidelines For Starting Your Game
 * Using Version Control
 * Set up an icon
 * Etc.
+* Python Version Information
+* Pygame Version Information
 
 The CISC374 Activity Bundle Skeleton
 ------------------------------------
