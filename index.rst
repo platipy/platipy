@@ -16,6 +16,8 @@ Testing
    intro
    pythonista
    pygame_and_spyral
+   targetting
+   gamedev
 
 
 ..    Indices and tables

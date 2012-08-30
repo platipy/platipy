@@ -6,6 +6,9 @@ This chapter is will provide a very brief overview of some important python conc
 Basic Concepts
 --------------
 
+PEP8 and You
+;;;;;;;;;;;;
+
 Lists, Dicts, Sets, and Tuples
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

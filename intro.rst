@@ -10,6 +10,9 @@ The OLPC XO
 
 * Talk about Chester and why OLPCs. Talk about the hardware on XO-1 and XO-1.5 (also perhaps XO-1.75). Compare the hardware to modern cellphones. Be sure to mention screen resolution, it's an important factor *
 
+Sugar and Activities
+--------------------
+
 Pygame and Spyral
 -----------------
 
