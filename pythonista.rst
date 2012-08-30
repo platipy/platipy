@@ -9,7 +9,7 @@ Basic Concepts
 PEP8 and The Zen of Python
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 One of the most important aspects of developing in Python is the Python community. Code is meant to be read, used, and worked on by many people. As this will most likely be a group project, these things are important even in your class. PEP8_ provides a style guide for Python code. It is a lengthy document, and not everything it has to say will be immediately applicable, but come back to it. Some guidelines you may choose to ignore in your own code with no reprecussions, but some guidelines are absolutely essential. Some guidelines that are essential to follow for this course:
-  * Use 4 spaces per indentation level. (Good editors will allow you to set soft-tabs to four spaces. Figure this out before you continue)
+  * Use 4 spaces per indentation level. (Good editors will allow you to set soft-tabs to four spaces. Figure this out before you continue. When working with a team, indentation style is non-negotiable.)
   * `Rules on blank lines <http://www.python.org/dev/peps/pep-0008/#blank-lines>`_
   * `Naming conventions <http://www.python.org/dev/peps/pep-0008/#prescriptive-naming-conventions>`_ are particularly important.
 
