@@ -189,7 +189,16 @@ Generator expressions are also a form of comprehension that does not have the sa
 
 Data types and Comparisons
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-Need to talk about is vs ==, in, etc.
+
+Python has three important objects which we have not talked about thus far, ``True``, ``False``, and ``None``. These are special objects which are globally unique within a program. In Python 3, they are all keywords, though this is not true in Python2. These objects will be important in a moment.
+
+Python has many of the comparison operators you would expect in most other languages, like ``<``, ``<=``, ``>``, ``>=``, ``==``, and ``!=``. The comparison operators behave like you would expect, but the ``==`` operator is a bit different, and has a cousin in Python, the ``is`` operator.
+
+``is`` is the operator for object equality, meaning that both operands are identical objects. ``==`` is a less strict equality comparison. Here's some examples to hilight the differences
+
+Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are short-circuit operators like most other languages.
+
+For more information on built-in types and truth value testing, see the `Python tutorial's section on Built-in Types <http://docs.python.org/library/stdtypes.html>`_.
 
 .. _generators-and-iterators:
 
