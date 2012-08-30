@@ -130,6 +130,26 @@ Dictionaries, like lists, provide many more useful features. See the `Python tut
 Sequence Unpacking
 ;;;;;;;;;;;;;;;;;;
 
+A useful Python feature is the ability to unpack a sequence, allowing for multiple assignment.
+
+>>> a,b,c = 1, 2, 3
+>>> a
+1
+>>> b
+2
+>>> c
+3
+
+This also allows swapping without a temporary variable, due to the way evaluation and assignment works in Python.
+
+>>> a,b = b,a
+>>> a
+2
+>>> b
+1
+
+
+
 Comprehensions
 ;;;;;;;;;;;;;;
 
