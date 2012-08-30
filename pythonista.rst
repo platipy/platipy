@@ -148,10 +148,44 @@ This also allows swapping without a temporary variable, due to the way evaluatio
 >>> b
 1
 
-
-
 Comprehensions
 ;;;;;;;;;;;;;;
+
+Comprehensions are a very powerful Python idiom that allows looping and filtering of data in a single expression. For a simple list comprehension, we can create a list of the squares of the integers from 0-9.
+
+>>> squares = [x ** 2 for x in range(10)]
+>>> squares
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+This is shorter than the equivalent loop
+
+>>> squares = []
+>>> for x in range(10):
+...     squares.append(x ** 2)
+... 
+>>> squares
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+and also the preferred way of doing much of functional programming in Python. You may notice that this is the same as 
+
+>>> map(lambda x : x ** 2, range(10))
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+In addition to mapping over sequences, comprehensions also support filtering
+
+>>> odd_squares = [x ** 2 for x in range(10) if x % 2 == 1]
+>>> odd_squares
+[1, 9, 25, 49, 81]
+
+Comprehensions also support iteration over multiple sequences simultaneously.
+
+>>> [(x,y) for x in range(3) for y in range(4)]
+[(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2, 0), (2, 1), (2, 2), (2, 3)]
+
+The rule of thumb is that evaluation happens right to left in the for sequences, as the last for sequence would be like the innermost for loop.
+
+Generator expressions are also a form of comprehension that does not have the same speed and memory overhead as list comprehensions up front. You'll see more about them in :ref:`Generators and Iterators`. If you're using Python 2.7, you also have access to dict and set comprehensions, which we won't talk about here.
+
 
 Data types and Comparisons
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
