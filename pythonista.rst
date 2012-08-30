@@ -184,14 +184,16 @@ Comprehensions also support iteration over multiple sequences simultaneously.
 
 The rule of thumb is that evaluation happens right to left in the for sequences, as the last for sequence would be like the innermost for loop.
 
-Generator expressions are also a form of comprehension that does not have the same speed and memory overhead as list comprehensions up front. You'll see more about them in :ref:`Generators and Iterators`. If you're using Python 2.7, you also have access to dict and set comprehensions, which we won't talk about here.
+Generator expressions are also a form of comprehension that does not have the same speed and memory overhead as list comprehensions up front. You'll see more about them in :ref:`generators-and-iterators`. If you're using Python 2.7, you also have access to dict and set comprehensions, which we won't talk about here.
 
 
 Data types and Comparisons
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 Need to talk about is vs ==, in, etc.
 
-Sequences, Iterators, and Generators
+.. _generators-and-iterators:
+
+Generators and Iterators
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 Exceptions
