@@ -41,10 +41,10 @@ Namespaces are one honking great idea -- let's do more of those!
 
 .. _PEP8: http://www.python.org/dev/peps/pep-0008/
 
-Lists, Tuples, Dicts, and Sets
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Lists and Tuples
+;;;;;;;;;;;;;;;;
 
-Lists and tuples are two of the most common sequence types, or iterables. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
+The list and the tuple are two of the most common sequence_ types. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
 
 >>> alist = [1,2,3]
 >>> atuple = (1,2,3)
@@ -60,7 +60,7 @@ Lists and tuples are two of the most common sequence types, or iterables. Lists 
 >>> atuple[2]
 3
 
-The key difference between lists and tuples is that lists are mutable, and tuples are immutable.
+The key difference between lists and tuples is that lists are mutable_, and tuples are immutable_.
 
 >>> alist[2] = 4
 >>> alist
@@ -75,7 +75,56 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'tuple' object has no attribute 'append'
 
+Lists also have a number of other useful methods. `More on Lists <http://docs.python.org/tutorial/datastructures.html#more-on-lists>`_.
 
+
+Dictionaries
+;;;;;;;;;;;;
+
+A dictionary, or a dict, is the standard mapping type in Python. Dicts can be created a few ways:
+
+>>> {'key1' : 'value1', 'key2' : 'value2'}
+{'key2': 'value2', 'key1': 'value1'}
+>>> dict([('key1', 'value1'), ('key2', 'value2')])
+{'key2': 'value2', 'key1': 'value1'}
+>>> dict(key1 = 'value1', key2 = 'value2')
+{'key2': 'value2', 'key1': 'value1'}
+
+The keys in a dictionary can be any hashable_ object.
+
+>>> a = { (0,1) : 1, 'a' : 4, 5 : 'test', (0, 'test') : 7 }
+>>> a
+{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test'}
+
+.. note::
+    While it is possible to include different data types in lists and dicts due to Python's loose-typing, it is almost always a bad practice and should be used with extreme care.
+
+To retrieve values from a dictionary, you access them in the same way as lists and tuples.
+
+>>> a[(0,1)]
+1
+>>> a[5]
+'test'
+
+You can also test if a key is in a dictionary using the *in* keyword:
+
+>>> 'a' in a
+True
+>>> 4 in a
+False
+
+You can also add new members to the dictionary:
+
+>>> a[7] = 12
+>>> a
+{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test', 7: 12}
+
+Dictionaries, like lists, provide many more useful features. See the `Python tutorial's section on dicts <http://docs.python.org/library/stdtypes.html#typesmapping>`_.
+
+.. _hashable: http://docs.python.org/glossary.html#term-hashable
+.. _immutable: http://docs.python.org/glossary.html#term-immutable
+.. _mutable: http://docs.python.org/glossary.html#term-mutable
+.. _sequence: http://docs.python.org/glossary.html#term-sequence
 
 
 Sequence Unpacking
