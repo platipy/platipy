@@ -200,13 +200,74 @@ Additionally, Python does contain boolean operators, but they are not ``&&``, ``
 
 For more information on built-in types and truth value testing, see the `Python tutorial's section on Built-in Types <http://docs.python.org/library/stdtypes.html>`_.
 
+
+Exceptions
+;;;;;;;;;;
+
+
 .. _generators-and-iterators:
 
 Generators and Iterators
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Exceptions
-;;;;;;;;;;
+Iterators are objects which define how iterating, or looping, over a sequence goes, but can also be used for general iteration purposes. To get an iterator of an object, you call `iter(obj)`. The returned object will have a `next()` method which will return the next item in the sequence or iterator. When there are no more items to iterate over, it will throw a `StopIteration` exception.
+
+>>> l = [1,2]
+>>> alist = [1,2]
+>>> i = iter(alist)
+>>> i.next()
+1
+>>> i.next()
+2
+>>> i.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+
+Generator is the name of the pattern used to create iterators, but also refers to two convenient ways to create iterators. First, as an example of an iterator, let's write a simplified version of the `xrange` generator that takes only one argument and always starts from 0.
+
+>>> class xrange(object):
+...     def __init__(self, n):
+...         self.n = n
+...         self.cur = 0
+...     
+...     def __iter__(self):
+...         return self
+...     
+...     def next(self):
+...         if self.cur < self.n:
+...             ret = self.cur
+...             self.cur += 1
+...             return ret
+...         else:
+...             raise StopIteration()
+... 
+>>> xrange(5)
+<__main__.xrange object at 0x10b130cd0>
+>>> list(xrange(5))
+[0, 1, 2, 3, 4]
+
+We see immediately that this is a bit cumbersome and has a lot of boilerplate. Generator functions are a much simpler way to write this generator. In a generator function, the `yield` keyword returns a value, an the Python interpreter remembers where evaluation stopped when yield was called. On subsequent calls to the function, control returns to where `yield` was called. `xrange` now looks like the following.
+
+>>> def xrange(n):
+...     cur = 0
+...     while cur < n:
+...         yield cur
+...         cur += 1
+... 
+>>> list(xrange(5))
+[0, 1, 2, 3, 4]
+
+You can even call yield in more than one place in the code, if you wish. This simplifies the creation of generators quite a bit.
+
+Generator expressions are also commonplace. They use the same syntax as list comprehensions, but use `()` in place of `[]`. This allows for memory efficient use of generators and iterators for manipulating data.
+
+>>> gen = (x ** 2 for x in range(6))
+>>> gen
+<generator object <genexpr> at 0x10b11deb0>
+>>> list(gen)
+[0, 1, 4, 9, 16, 25]
+
+For more advanced tricks with generators and iterators, see the :ref:`itertools` module.
 
 Object Oriented Programming
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -258,6 +319,8 @@ Additional Reading
 
 Important Modules
 -----------------
+
+.. _itertools:
 
 itertools
 ;;;;;;;;;
