@@ -249,6 +249,10 @@ Context Managers
 
 This could be considered basic as well
 
+Descriptors
+;;;;;;;;;;;
+
+
 Additional Reading
 ;;;;;;;;;;;;;;;;;;
 
@@ -291,3 +295,5 @@ Not sure if this is necessary here? Should mention things like requests
 
 Additional Reading
 ------------------
+
+* `Hidden Features of Python on StackOverflow <http://stackoverflow.com/questions/101268/hidden-features-of-python?sort=votes#sort-top>`_ is a great QA that just details some of Python's great features. Many of them have been listed here, a few haven't. 

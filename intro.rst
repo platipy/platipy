@@ -1,17 +1,19 @@
 Introduction and Target Audience
 ================================
 
-This document is intended to be a collection of the wisdom learned about developing games for the OLPC XO, with a special focus on the goals of the students taking CISC374 at the University of Delaware. We won't talk too much about developing individual games, as that varies widely from year to year and team to team, but instead we'll focus on the differences and particular challenges that are faced when placing these games on the OLPC, and some ways to overcome those challenges. Each section will conclude with links for additional reading that will often include more depth and breadth than will be presented here.
+This document is intended to be a collection of the wisdom learned about developing games for the `OLPC XO <http://one.laptop.org/>`_, with a special focus on the goals of the students taking CISC374 at the `University of Delaware <http://udel.edu>`_. We won't talk too much about developing individual games, as that varies widely from year to year and team to team, but instead we'll focus on the differences and particular challenges that are faced when placing these games on the OLPC, and some ways to overcome those challenges. Each section will conclude with links for additional reading that will often include more depth and breadth than will be presented here.
 
 While we will focus mostly on the needs of the course at the University of Delaware, most of the material is generally applicable for developing pygame-based activities for the OLPC XO.
 
 The OLPC XO
 -----------
 
-* Talk about Chester and why OLPCs. Talk about the hardware on XO-1 and XO-1.5 (also perhaps XO-1.75). Compare the hardware to modern cellphones. Be sure to mention screen resolution, it's an important factor *
+The XO was chosen as a development environment for a number of reasons. Probably the most important of these reasons is that the middle school with which CISC374 coordinates received a donation that allows them to assign one XO to every student at the school. There is also a large educational development community around the XO and the OLPC foundation, so the hope is that the results of this course can be released to the greater community. 
+
+What follows is a quick introduction to the OLPC for those unfamiliar with it.
 
 Sugar and Activities
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Sugar is the user interface of the XO laptop. It is designed very differently from traditional systems like Windows or OS X. Built on Fedora, there are several concepts unique to the system that you should understand before designing for it.
 
@@ -63,15 +65,37 @@ If you have problems connecting, try some of these fixes.
   * Smack your XO until you feel better.
   * Try the stuff on `this page <http://wiki.laptop.org/go/Wifi_Connectivity#Special_Considerations>`_.
 
-Pygame and Spyral
------------------
+Development Options
+-------------------
 
-* Talk a bit about why pygame was chosen, the upsides and downsides to that. Talk briefly about why spyral was written, the upsides and downsides to using spyral, and the benefit it has been to the course *
+Python
+~~~~~~
 
-Alternatives to Pygame
-----------------------
-* Talk about GTK, about why other toolkits are generally not an option *
+As with most platforms, there are a number of options available for development. The first choice we needed to make for the XO was language. Python is the language of choice for a number of reasons. First, the vast majority of activities and most of Sugar itself are written in Python, so using the preferred language makes finding examples and documentation significantly easier. Additionally, given the tight schedule for the course, a dynamic language that allows rapid development is a good choice.
+
+Pygame vs PyGTK+
+~~~~~~~~~~~~~~~~
+
+With Python chosen, we have two choices for a user interface that will work with Sugar: pygame and PyGTK+. PyGTK+ is a set of bindings for GTK+, a common GUI toolkit for Desktop applications. While some games may be written easily within the confines of PyGTK+, many of the game ideas which have been proposed would not, requiring much custom development of widgets and internal knowledge of GTK+.
+
+Pygame, however, is a library made specificially for game development. It provides simple and direct ways of drawing and managing 2D images on the screen, making it a great choice for making simple games. It does, however, also have a few downsides. Most notably, hardware support with pygame is notoriously lacking, and further limited by the XO's lack of OpenGL drivers on some models. Additionally, compared to PyGTK+, pygame is a second-class citizen in OLPC development, requiring a number of hacks and workarounds. To remedy this situation, a custom library built on top of pygame, called spyral, has been developed for this course.
+
+For almost everyone, pygame is going to be the obvious choice, and so it will be the focus of the rest of this guide. If you choose to work with PyGTK, there are some resources available.
+
+Spyral
+~~~~~~
+
+In addition to Python and pygame, the recommendation for this course and the rest of this tutorial will cover the use of spyral. Spyral is a library built on top of pygame to provide a number of features which are useful for this course. Most importantly, spyral helps provide the following:
+
+* Some built-in core concepts of game design. Pygame is really just a wrapper for doing 2D drawing, with a few nice features like sound and input support, but doesn't provide much in terms of higher level game design concepts. Spyral provides a scene system, improved game clocks, a camera system, and more.
+
+* An optimized method of drawing. Because pygame on the XO is not hardware accelerated, pygame's software rendering is the slowest part of every game. Spyral provides a no-hassle method of doing dirty rendering which can increase performance significantly for sprite-based 2D games
 
 Additional Reading
 ------------------
-* Some links to the OLPC wiki, pygame's about, spyral's about, pygtk's about, cisc374 wiki, etc.
+
+* For some additional information about the OLPC XO, visit the `OLPC Wiki <http://wiki.laptop.org/go/The_OLPC_Wiki>`_, though be warned that there is a lot of out of date information floating around various areas.
+
+* For some additional motivation for Python and PyGTK+ and Pygame, the `FLOSS Manuals guide to "Make your own sugar activities" <http://www.flossmanuals.net/make-your-own-sugar-activities/>`_ is a good read.
+
+* For a more in-depth look at the motivation behind spyral, see *TODO*.
