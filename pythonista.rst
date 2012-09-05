@@ -186,9 +186,28 @@ The rule of thumb is that evaluation happens right to left in the for sequences,
 
 Generator expressions are also a form of comprehension that does not have the same speed and memory overhead as list comprehensions up front. You'll see more about them in :ref:`generators-and-iterators`. If you're using Python 2.7, you also have access to dict and set comprehensions, which we won't talk about here.
 
+Numerics
+;;;;;;;;
 
-Data types and Comparisons
-;;;;;;;;;;;;;;;;;;;;;;;;;;
+There are two main kinds of numerical types in Python: ``float`` and ``int``. Roughly speaking, ``float`` is used for decimal values and ``int`` is used for Integers. When possible, stick with ``int``, because computers are `not good at storing and comparing <http://en.wikipedia.org/wiki/Floating_point#Accuracy_problems>`_ ``float``. When performing operations between ``float`` and ``int``, the result will be a ``float``. 
+
+The operators ``+`` (addition), ``-`` (subtraction), and ``*`` (multiplication), all act predictably. Some other operations that are slightly more unusual are:
+
+  * ``x / y`` (division): quotient of ``x`` and ``y``
+  * ``x // y`` (integer division): quotient of ``x`` and ``y``, rounded down.
+  * ``x % y`` (remainder, or `modulo <http://simple.wikipedia.org/wiki/Modular_arithmetic>`_): remainder of ``x / y``
+  * ``x ** y`` (power): raises ``x`` to the power of ``y``
+  * ``abs(x)`` (absolute value, or magnitude): forces ``x`` to be positive
+  * ``int(x)`` (convert to integer): converts ``x`` to integer
+  * ``float(x)`` (convert to float): converts ``y`` to float
+
+Strings
+;;;;;;;
+
+Strings in Python are actually just immutable sequences of characters. Python has a `ton of built-in functions <http://docs.python.org/release/3.1.5/library/stdtypes.html#string-methods>`_ to work with strings. Remember, because Strings are immutable, you cannot modify them - instead, functions that work on strings return new strings.
+
+Truth-Testing
+;;;;;;;;;;;;;
 
 Python has three important objects which we have not talked about thus far, ``True``, ``False``, and ``None``. These are special objects which are globally unique within a program. In Python 3, they are all keywords, though this is not true in Python2. These objects will be important in a moment.
 
@@ -198,8 +217,27 @@ Python has many of the comparison operators you would expect in most other langu
 
 Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are short-circuit operators like most other languages.
 
-For more information on built-in types and truth value testing, see the `Python tutorial's section on Built-in Types <http://docs.python.org/library/stdtypes.html>`_.
+Typing in Python
+;;;;;;;;;;;;;;;;
 
+There are many types in Python, and you can always find out an expression's type by using the ``type(x)`` function.
+
+>>> type(5)
+<type 'int'>
+>>> type(5.0)
+<type 'float'>
+>>> type("Hello World")
+<type 'str'>
+>>> type(u"Hello Unicode World")
+<type 'unicode'>
+>>> type([1,2,3])
+<type 'list'>
+>>> type(None)
+<type 'NoneType'>
+>>> type(type(None))
+<type 'type'>
+
+For more information on built-in types and truth value testing, see the `Python tutorial's section on Built-in Types <http://docs.python.org/library/stdtypes.html>`_.
 
 Exceptions
 ;;;;;;;;;;
