@@ -206,6 +206,19 @@ Strings
 
 Strings in Python are actually just immutable sequences of characters. Python has a `ton of built-in functions <http://docs.python.org/release/3.1.5/library/stdtypes.html#string-methods>`_ to work with strings. Remember, because Strings are immutable, you cannot modify them - instead, functions that work on strings return new strings.
 
+You can concatenate (join) strings in python using the ``+`` operator. However, it is much preferred to use interpolation with ``%`` instead. This method will allow you to provide named "arguments" to the string, which will be invaluable when it comes time to internationalize your game.
+
+Compare the difference between concatenation:
+
+>>> "Welcome, " + user + ", you are visitor #" + visitor + "."
+"Welcome, Bob, you are visitor #3 to Platipy"
+
+And interpolation:
+
+>>> "Welcome, %(user)s, you are visitor #%(visitor)d to Platipy." %
+...		{'user' : user, 'visitor' : visitor}
+"Welcome, Bob, you are visitor #3 to Platipy, version 1.00"
+
 Truth-Testing
 ;;;;;;;;;;;;;
 
