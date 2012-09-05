@@ -217,10 +217,16 @@ And interpolation:
 
 >>> "Welcome, %(user)s, you are visitor #%(visitor)d to Platipy." %
 ...		{'user' : user, 'visitor' : visitor}
-"Welcome, Bob, you are visitor #3 to Platipy, version 1.00"
+"Welcome, Bob, you are visitor #3 to Platipy"
 
 Truth-Testing
 ;;;;;;;;;;;;;
+
+Talk about True, False
+
+Testing for ``==`` vs ``is``
+
+Different expressions evaluate to True and False (``[]`` and ``""``)
 
 Python has three important objects which we have not talked about thus far, ``True``, ``False``, and ``None``. These are special objects which are globally unique within a program. In Python 3, they are all keywords, though this is not true in Python2. These objects will be important in a moment.
 
