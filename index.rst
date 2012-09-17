@@ -15,7 +15,9 @@ Testing
 
    intro
    pythonista
+   pong
    pygame_and_spyral
+   snake
    targetting
    gamedev
 
