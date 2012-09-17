@@ -41,8 +41,64 @@ Namespaces are one honking great idea -- let's do more of those!
 
 .. _PEP8: http://www.python.org/dev/peps/pep-0008/
 
-Lists and Tuples
-;;;;;;;;;;;;;;;;
+Control Flow in Python
+;;;;;;;;;;;;;;;;;;;;;;
+
+The ``if`` statement acts predictably in Python.
+
+>>> if <conditional>:
+...    statement
+... elif <conditional>:
+...    statement
+... else:
+...    statement
+
+When it comes to loops, the most preferred idiom in Python is a ``for`` loop , used in the style that most other languages refer to as a "for each" loop.
+
+>>> for <item> in <sequence>:
+...    statement
+
+Occasionally, you will use the other looping mechanism, ``while`` (but you probably shouldn't, second-guess any use of it).
+
+>>> while <conditional>:
+...    statement
+
+Instead of a "do-until" loop like most languages have, a common idiom is
+
+>>> for <item> in <sequence>:
+...    statement
+...    if <conditional>:
+...       break
+
+>>> while True:
+...    statement
+...    if <conditional>:
+...       break
+
+A final useful keyword is ``pass``, which simply ends execution of the branch. This is often used to define stubs and "to-do" code.
+
+>>> if <conditional>:
+...     pass # TODO: make this "statement"
+
+Numerics
+;;;;;;;;
+
+There are two main kinds of numerical types in Python: ``float`` and ``int``. Basically, ``float`` is used for decimal values and ``int`` is used for Integers. When possible, stick with ``int``, because computers are `not good at storing and comparing <http://en.wikipedia.org/wiki/Floating_point#Accuracy_problems>`_ ``float``. When performing operations between ``float`` and ``int``, the result will be a ``float``. 
+
+The operators ``+`` (addition), ``-`` (subtraction), and ``*`` (multiplication), all act predictably. Some other operations that are slightly more unusual are:
+
+  * ``x / y`` (division): quotient of ``x`` and ``y``
+  * ``x // y`` (integer division): quotient of ``x`` and ``y``, rounded down.
+  * ``x % y`` (remainder, or `modulo <http://simple.wikipedia.org/wiki/Modular_arithmetic>`_): remainder of ``x / y``
+  * ``x ** y`` (power): raises ``x`` to the power of ``y``
+  * ``abs(x)`` (absolute value, or magnitude): forces ``x`` to be positive
+  * ``int(x)`` (convert to integer): converts ``x`` to integer
+  * ``float(x)`` (convert to float): converts ``y`` to float
+
+Sequence Types
+;;;;;;;;;;;;;;
+
+A ``sequence`` is a key concept in Python. There are many different kinds of sequences, but the basic idea is simply a bunch of data.
 
 The list and the tuple are two of the most common sequence_ types. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
 
@@ -77,54 +133,23 @@ AttributeError: 'tuple' object has no attribute 'append'
 
 Lists also have a number of other useful methods. `More on Lists <http://docs.python.org/tutorial/datastructures.html#more-on-lists>`_.
 
+Strings
+;;;;;;;
 
-Dictionaries
-;;;;;;;;;;;;
+Strings in Python are actually just immutable sequences of characters. Python has a `ton of built-in functions <http://docs.python.org/release/3.1.5/library/stdtypes.html#string-methods>`_ to work with strings. Remember, because Strings are immutable, you cannot modify them - instead, functions that work on strings return new strings.
 
-A dictionary, or a dict, is the standard mapping type in Python. Dicts can be created a few ways:
+You can concatenate (join) strings in python using the ``+`` operator. However, it is much preferred to **use interpolation** with ``%`` instead. This method will allow you to provide named "arguments" to the string, which will be invaluable when it comes time to internationalize your game.
 
->>> {'key1' : 'value1', 'key2' : 'value2'}
-{'key2': 'value2', 'key1': 'value1'}
->>> dict([('key1', 'value1'), ('key2', 'value2')])
-{'key2': 'value2', 'key1': 'value1'}
->>> dict(key1 = 'value1', key2 = 'value2')
-{'key2': 'value2', 'key1': 'value1'}
+Compare the difference between concatenation:
 
-The keys in a dictionary can be any hashable_ object.
+>>> "Welcome, " + user + ", you are visitor #" + visitor + "."
+"Welcome, Bob, you are visitor #3 to Platipy"
 
->>> a = { (0,1) : 1, 'a' : 4, 5 : 'test', (0, 'test') : 7 }
->>> a
-{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test'}
+And interpolation:
 
-.. note::
-    While it is possible to include different data types in lists and dicts due to Python's loose-typing, it is almost always a bad practice and should be used with extreme care.
-
-To retrieve values from a dictionary, you access them in the same way as lists and tuples.
-
->>> a[(0,1)]
-1
->>> a[5]
-'test'
-
-You can also test if a key is in a dictionary using the *in* keyword:
-
->>> 'a' in a
-True
->>> 4 in a
-False
-
-You can also add new members to the dictionary:
-
->>> a[7] = 12
->>> a
-{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test', 7: 12}
-
-Dictionaries, like lists, provide many more useful features. See the `Python tutorial's section on dicts <http://docs.python.org/library/stdtypes.html#typesmapping>`_.
-
-.. _hashable: http://docs.python.org/glossary.html#term-hashable
-.. _immutable: http://docs.python.org/glossary.html#term-immutable
-.. _mutable: http://docs.python.org/glossary.html#term-mutable
-.. _sequence: http://docs.python.org/glossary.html#term-sequence
+>>> "Welcome, %(user)s, you are visitor #%(visitor)d to Platipy." %
+...		{'user' : user, 'visitor' : visitor}
+"Welcome, Bob, you are visitor #3 to Platipy"
 
 
 Sequence Unpacking
@@ -185,38 +210,53 @@ The rule of thumb is that evaluation happens right to left in the for sequences,
 
 Generator expressions are also a form of comprehension that does not have the same speed and memory overhead as list comprehensions up front. You'll see more about them in :ref:`generators-and-iterators`. If you're using Python 2.7, you also have access to dict and set comprehensions, which we won't talk about here.
 
-Numerics
-;;;;;;;;
+Dictionaries
+;;;;;;;;;;;;
 
-There are two main kinds of numerical types in Python: ``float`` and ``int``. Roughly speaking, ``float`` is used for decimal values and ``int`` is used for Integers. When possible, stick with ``int``, because computers are `not good at storing and comparing <http://en.wikipedia.org/wiki/Floating_point#Accuracy_problems>`_ ``float``. When performing operations between ``float`` and ``int``, the result will be a ``float``. 
+A dictionary, or a dict, is the standard mapping type in Python. Dicts can be created a few ways:
 
-The operators ``+`` (addition), ``-`` (subtraction), and ``*`` (multiplication), all act predictably. Some other operations that are slightly more unusual are:
+>>> {'key1' : 'value1', 'key2' : 'value2'}
+{'key2': 'value2', 'key1': 'value1'}
+>>> dict([('key1', 'value1'), ('key2', 'value2')])
+{'key2': 'value2', 'key1': 'value1'}
+>>> dict(key1 = 'value1', key2 = 'value2')
+{'key2': 'value2', 'key1': 'value1'}
 
-  * ``x / y`` (division): quotient of ``x`` and ``y``
-  * ``x // y`` (integer division): quotient of ``x`` and ``y``, rounded down.
-  * ``x % y`` (remainder, or `modulo <http://simple.wikipedia.org/wiki/Modular_arithmetic>`_): remainder of ``x / y``
-  * ``x ** y`` (power): raises ``x`` to the power of ``y``
-  * ``abs(x)`` (absolute value, or magnitude): forces ``x`` to be positive
-  * ``int(x)`` (convert to integer): converts ``x`` to integer
-  * ``float(x)`` (convert to float): converts ``y`` to float
+The keys in a dictionary can be any hashable_ object.
 
-Strings
-;;;;;;;
+>>> a = { (0,1) : 1, 'a' : 4, 5 : 'test', (0, 'test') : 7 }
+>>> a
+{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test'}
 
-Strings in Python are actually just immutable sequences of characters. Python has a `ton of built-in functions <http://docs.python.org/release/3.1.5/library/stdtypes.html#string-methods>`_ to work with strings. Remember, because Strings are immutable, you cannot modify them - instead, functions that work on strings return new strings.
+.. note::
+    While it is possible to include different data types in lists and dicts due to Python's loose-typing, it is almost always a bad practice and should be used with extreme care.
 
-You can concatenate (join) strings in python using the ``+`` operator. However, it is much preferred to use interpolation with ``%`` instead. This method will allow you to provide named "arguments" to the string, which will be invaluable when it comes time to internationalize your game.
+To retrieve values from a dictionary, you access them in the same way as lists and tuples.
 
-Compare the difference between concatenation:
+>>> a[(0,1)]
+1
+>>> a[5]
+'test'
 
->>> "Welcome, " + user + ", you are visitor #" + visitor + "."
-"Welcome, Bob, you are visitor #3 to Platipy"
+You can also test if a key is in a dictionary using the *in* keyword:
 
-And interpolation:
+>>> 'a' in a
+True
+>>> 4 in a
+False
 
->>> "Welcome, %(user)s, you are visitor #%(visitor)d to Platipy." %
-...		{'user' : user, 'visitor' : visitor}
-"Welcome, Bob, you are visitor #3 to Platipy"
+You can also add new members to the dictionary:
+
+>>> a[7] = 12
+>>> a
+{(0, 1): 1, 'a': 4, (0, 'test'): 7, 5: 'test', 7: 12}
+
+Dictionaries, like lists, provide many more useful features. See the `Python tutorial's section on dicts <http://docs.python.org/library/stdtypes.html#typesmapping>`_.
+
+.. _hashable: http://docs.python.org/glossary.html#term-hashable
+.. _immutable: http://docs.python.org/glossary.html#term-immutable
+.. _mutable: http://docs.python.org/glossary.html#term-mutable
+.. _sequence: http://docs.python.org/glossary.html#term-sequence
 
 Truth-Testing
 ;;;;;;;;;;;;;
