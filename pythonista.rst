@@ -41,8 +41,52 @@ Namespaces are one honking great idea -- let's do more of those!
 
 .. _PEP8: http://www.python.org/dev/peps/pep-0008/
 
-Lists and Tuples
-;;;;;;;;;;;;;;;;
+Control Flow in Python
+;;;;;;;;;;;;;;;;;;;;;;
+
+The ``if`` statement acts predictably in Python.
+
+>>> if <conditional>:
+...    statement
+... elif <conditional>:
+...    statement
+... else:
+...    statement
+
+When it comes to loops, the most preferred idiom in Python is a ``for`` loop , used in the style that most other languages refer to as a "for each" loop.
+
+>>> for <item> in <sequence>:
+...    statement
+
+Occasionally, you will use the other looping mechanism, ``while`` (but you probably shouldn't, second-guess any use of it).
+
+>>> while <conditional>:
+...    statement
+
+Instead of a "do-until" loop like most languages have, a common idiom is
+
+>>> for <item> in <sequence>:
+...    statement
+...    if <conditional>:
+...       break
+
+>>> while True:
+...    statement
+...    if <conditional>:
+...       break
+
+A final useful keyword is ``pass``, which simply ends execution of the branch. This is often used to define stubs and "to-do" code.
+
+>>> if <conditional>:
+...     pass # TODO: make this "statement"
+
+Python Primitives and Types
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Python has quite a few types built-in 
+
+Sequence Types
+;;;;;;;;;;;;;;
 
 The list and the tuple are two of the most common sequence_ types. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
 
