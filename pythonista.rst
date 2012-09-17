@@ -81,6 +81,11 @@ A final useful keyword is ``pass``, which simply ends execution of the branch. T
 >>> if <conditional>:
 ...     pass # TODO: make this "statement"
 
+"Variables" in Python
+;;;;;;;;;;;;;;;;;;;;;
+
+Don't mistake Python for having variables, because that's not really true. Instead, there are "names" and "references. There is a good pictorial explanation of this concept `here <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#other-languages-have-variables>'_.
+
 Numerics
 ;;;;;;;;
 
@@ -369,7 +374,7 @@ True
 >>> 1000 is 10**3 # behaves unexpectedly!
 False
 
-Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are `short-circuit operators <http://en.wikipedia.org/wiki/Short-circuit_evaluation>` like most other languages.
+Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are `short-circuit operators <http://en.wikipedia.org/wiki/Short-circuit_evaluation>`_ like most other languages.
 
 Finally, you can use ``in`` to test membership.
 
@@ -428,6 +433,7 @@ And you can even have arbitrary arguments.
 8
 
 You can use named parameters when calling a function.
+
 >>> mean(first= 10, second= 14)
 12
 
@@ -527,8 +533,61 @@ For more advanced tricks with generators and iterators, see the :ref:`itertools`
 Object Oriented Programming
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+Python has classes!
+
+>>> class <name>(object):
+...   <body>
+
+After you have a class, you can make instances of it:
+
+>>> class Dog(object):
+...    pass
+>>> my_dog = Dog()
+
+Classes usually have functions
+
+>>> class Dog(object):
+...    def sniff():
+...        print "Smells funny"
+>>> Spot = Dog()
+
+The constructor for a class is named ``__init__``. It's first parameter should always be ``self``, which will be the instance that is being constructed. You can use ``self.<variable_name>`` to define properties of the class. If you don't put the ``self.`` in front, you'll just make a property local to that function.
+
+>>> class Dog(object):
+...    def __init__(self):
+...        self.breed = "Labrador"
+...    def paint_it_black(self):
+...        self.breed = "Black Lab"
+
+Don't try and put properties outside of the ``__init__`` or other function, unless you want them to be `class` properties instead of `instance` properties.
+
+>>> class Dog(object):
+...    breeds = ['Black Lab', 'Corgi', 'Golden Retriever']
+>>> Dog.breeds
+['Black Lab', 'Corgi', 'Golden Retriever']
+
+Python does inheritance, too.
+
+>>> class Animal(object):
+...    def breathe():
+...        print "*Gasp*"
+>>> class Dog(Animal):
+...    pass
+>>> my_dog = Dog()
+>>> my_dog.breathe()
+*Gasp*
+
+There are lots of other details about Classes that you should read up about on the `Python Docs <http://docs.python.org/tutorial/classes.html>`_.
+
 If __name__ == "__main__":
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+If you want to see if a script is being called as main, you can use the foloowing at the bottom of your file:
+
+>>> if __name__ == "__main__":
+...    pass # main stuff
+
+In this class, we'll be using the launcher. So don't bother using this!
 
 Assertions
 ;;;;;;;;;;
@@ -540,8 +599,7 @@ Using dir() etc.
 Importing, Modules, and Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-Additional Reading
-;;;;;;;;;;;;;;;;;;
+This `article <http://effbot.org/zone/import-confusion.htm>`_ does a good job describing importing in Python.
 
 Advanced Concepts
 -----------------
