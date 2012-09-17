@@ -130,15 +130,14 @@ Dictionaries, like lists, provide many more useful features. See the `Python tut
 Sequence Unpacking
 ;;;;;;;;;;;;;;;;;;
 
-A useful Python feature is the ability to unpack a sequence, allowing for multiple assignment.
+A useful Python feature is the ability to unpack a sequence, allowing for multiple assignment. You can unpack a tuple as follows
 
->>> a,b,c = 1, 2, 3
->>> a
-1
->>> b
-2
->>> c
-3
+>>> position = (5, 10)
+>>> x, y = position
+>>> x
+5
+>>> y
+10
 
 This also allows swapping without a temporary variable, due to the way evaluation and assignment works in Python.
 
