@@ -400,9 +400,65 @@ There are many types in Python, and you can always find out an expression's type
 
 For more information on built-in types and truth value testing, see the `Python tutorial's section on Built-in Types <http://docs.python.org/library/stdtypes.html>`_.
 
+Functions
+;;;;;;;;;
+
+Defining a function is simple in python.
+
+>>> def my_function(argument1, argument2):
+...    statement
+
+You usually want to return something.
+
+>>> def mean(first, second):
+...    return (first + second) / 2
+
+You can also have default parameters.
+
+>>> def mean(first= 0, second= 9):
+...    return (first + second) / 2
+>>> mean()
+5
+
+And you can even have arbitrary arguments.
+
+>>> def mean(*numbers): #numbers will be a list!
+...   return sum(numbers) / len(numbers)
+>>> mean(1, 8, 10, 15)
+8
+
+You can use named parameters when calling a function.
+>>> mean(first= 10, second= 14)
+12
+
+Python treats functions as first-class objects, which means you can pass them around like anything else:
+
+>>> average = mean
+>>> average
+<function mean at 0x000000000>
+>>> mean(5,9)
+7
+>>> average(5,9)
+7
+>>> bool(mean)
+True
+
+If you don't know what Lambda (anonymous functions) and Closures are, be sure to check out those sections. They are very handy!
+
+
 Exceptions
 ;;;;;;;;;;
 
+Same as most languages:
+
+>>> try:
+...    dangerous_statement
+... except Exception, e:    # specific exception
+...    print e
+... except:
+...    print "Oh no!"       # all exceptions
+
+Don't use the ``as`` keyword, it was introduced in Python 3.
 
 .. _generators-and-iterators:
 
