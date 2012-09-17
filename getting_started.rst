@@ -6,7 +6,7 @@ Required Software
 
 XO laptops do not run the most current version of most of their software. If you want to be a good XO developer, you'll want to develop using the following versions.
   * Python `2.5 <http://www.python.org/getit/releases/2.5.4/>`_: You might be able to get away with using 2.6 or even 2.7, but absolutely do not bother using 3.*. 
-  * Pygame `1.8.1 <http://pygame.org/download.shtml>`_ (Scroll to the bottom for the 1.8.1 release): Make sure you are not using the most up-to-date version of Pygame (1.9), because there are several inconsistencies. For instance, the Color package is not present in 1.8.1. The documentation for 1.8.1 is provided :download:`here <files/pygame-1.8.1-docs.zip>`.
+  * `Pygame <http://pygame.org/download.shtml>`_: Version 1.8.1 is the best to work with, but any version should work. Users for some operating systems may have to use the newest versions.
 
 If you cannot get older versions installed, Python 2.7 and the latest version of pygame are acceptable, but make sure you are testing often on the XO.
 
