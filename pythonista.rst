@@ -204,41 +204,6 @@ Tuple unpacking is wonderful, because it allows you to have elegant multiple ret
 
 >>> x, y, width, height = image.get_dimensions()
 
-Iterating Over Sequences
-;;;;;;;;;;;;;;;;;;;;;;;;
-
-Back in ``Control Flow``, we mentioned the ``for`` loop, and how it was used to iterate over sequences. It's very convenient!
-
->>> for a_dog_breed in ['Labrador', 'Corgi', 'Golden Retriever']:
-...    print a_dog_breed
-'Labrador'
-'Corgi'
-'Golden Retriever'
-
-A very common use case is for iterating over a list of numbers. One way is to use ``range`` and it's generator equivalent ``xrange`` (we'll talk about how they are different in generators; for now, just use ``xrange``).
-
->>> for x in xrange(3):
-...    print x
-0
-1
-2
-
-The best way to iterate over a list and keep track of indices is to use the `enumerate <http://docs.python.org/library/functions.html#enumerate>`_ function.
-
->>> for index, name in enumerate(seasons)
-...    print index, name
-0 spring
-1 summer
-2 fall
-3 winter
-
-You can even iterate over dictionaries if you use the ``items`` function.
->>> for key, value in {1: 'a', 2: 'b', 3: 'c'}.items()
-...    print key, value
-1 a
-2 b
-3 c
-
 Comprehensions
 ;;;;;;;;;;;;;;
 
@@ -325,22 +290,93 @@ Dictionaries, like lists, provide many more useful features. See the `Python tut
 .. _mutable: http://docs.python.org/glossary.html#term-mutable
 .. _sequence: http://docs.python.org/glossary.html#term-sequence
 
+Iterating Over Sequences
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+Back in ``Control Flow``, we mentioned the ``for`` loop, and how it was used to iterate over sequences. It's very convenient!
+
+>>> for a_dog_breed in ['Labrador', 'Corgi', 'Golden Retriever']:
+...    print a_dog_breed
+'Labrador'
+'Corgi'
+'Golden Retriever'
+
+A very common use case is for iterating over a list of numbers. One way is to use ``range`` and it's generator equivalent ``xrange`` (we'll talk about how they are different in generators; for now, just use ``xrange``).
+
+>>> for x in xrange(3):
+...    print x
+0
+1
+2
+
+The best way to iterate over a list and keep track of indices is to use the `enumerate <http://docs.python.org/library/functions.html#enumerate>`_ function.
+
+>>> for index, name in enumerate(seasons)
+...    print index, name
+0 spring
+1 summer
+2 fall
+3 winter
+
+You can even iterate over dictionaries if you use the ``items`` function.
+>>> for key, value in {1: 'a', 2: 'b', 3: 'c'}.items()
+...    print key, value
+1 a
+2 b
+3 c
+
 Truth-Testing
 ;;;;;;;;;;;;;
 
-Talk about True, False
+There is no boolean type in Python. Anything can be evaluated for Truthiness in a conditional, however. Some things are always true, and some things are always false. You can test truthiness with the ``bool`` function.
 
-Testing for ``==`` vs ``is``
+>>> bool(True)          # True are special keywords
+True
+>>> bool(5)             # non-zero numbers are true
+True
+>>> bool(-5)            # only zero is false!
+True
+>>> bool([1,2,3])       # A non-empty sequence is true
+True
+>>> bool("Hello World") # A non-empty string is true
+True
+>>> bool(bool)          # functions are first-order things!
+True
 
-Different expressions evaluate to True and False (``[]`` and ``""``)
+Often, if you can think of it as "nothing", then it will evaluate to False.
 
-Python has three important objects which we have not talked about thus far, ``True``, ``False``, and ``None``. These are special objects which are globally unique within a program. In Python 3, they are all keywords, though this is not true in Python2. These objects will be important in a moment.
+>>> bool(False)  # False is a special keyword
+False
+>>> bool(0)      # zero is false
+False
+>>> bool([])     # empty list is false
+False
+>>> bool("")     # empty strings are false!
+False
+>>> bool(None)   # The special keyword None is false
+False
 
-Python has many of the comparison operators you would expect in most other languages, like ``<``, ``<=``, ``>``, ``>=``, ``==``, and ``!=``. The comparison operators behave like you would expect, but the ``==`` operator is a bit different, and has a cousin in Python, the ``is`` operator.
+There are quite a few built-in operators to test conditions. There are the usual suspects defined for most types (including non-numerics!): ``<``, ``<=``, ``>``, ``>=``, ``==``, and ``!=``.
 
-``is`` is the operator for object equality, meaning that both operands are identical objects. ``==`` is a less strict equality comparison. Here's some examples to hilight the differences
+An unusual operator is ``is``, which tests reference equality, meaning that both operands are identical objects (refer to the exact same thing). ``==`` is a value equality comparison (whether the two objects compute to the same thing). You will only use ``is`` for testing against ``None`` and testing object identity. Otherwise, use ``==``. Otherwise, you will find yourself in strange situations:
 
-Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are short-circuit operators like most other languages.
+>>> 10 == 10
+True
+>>> 10 is 10 # accidentally works because of an internal python detail
+True
+>>> 1000 == 10**3
+True
+>>> 1000 is 10**3 # behaves unexpectedly!
+False
+
+Additionally, Python does contain boolean operators, but they are not ``&&``, ``||``, and ``!`` like many other languages, they are ``and``, ``or``,  and ``not``. They are `short-circuit operators <http://en.wikipedia.org/wiki/Short-circuit_evaluation>` like most other languages.
+
+Finally, you can use ``in`` to test membership.
+
+>>> 5 in [1,2,3,4]
+False
+>>> 3 in [1,2,3,4]
+True
 
 Typing in Python
 ;;;;;;;;;;;;;;;;
