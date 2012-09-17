@@ -174,7 +174,7 @@ Unicode
 Sequence Unpacking
 ;;;;;;;;;;;;;;;;;;
 
-A useful Python feature is the ability to unpack a sequence, allowing for multiple assignment. You can unpack a tuple as follows
+A useful Python feature is the ability to unpack a sequence, allowing for multiple assignment. You can unpack a tuple as follows:
 
 >>> position = (5, 10)
 >>> x, y = position
@@ -190,6 +190,54 @@ This also allows swapping without a temporary variable, due to the way evaluatio
 2
 >>> b
 1
+
+It is the comma that determines if an expression is a tuple, not parenthesis.
+
+>>> one_tuple = 5,
+>>> not_tuple = (5)
+>>> one_tuple
+(5,)
+>>> not_tuple
+5
+
+Tuple unpacking is wonderful, because it allows you to have elegant multiple returns from a function.
+
+>>> x, y, width, height = image.get_dimensions()
+
+Iterating Over Sequences
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+Back in ``Control Flow``, we mentioned the ``for`` loop, and how it was used to iterate over sequences. It's very convenient!
+
+>>> for a_dog_breed in ['Labrador', 'Corgi', 'Golden Retriever']:
+...    print a_dog_breed
+'Labrador'
+'Corgi'
+'Golden Retriever'
+
+A very common use case is for iterating over a list of numbers. One way is to use ``range`` and it's generator equivalent ``xrange`` (we'll talk about how they are different in generators; for now, just use ``xrange``).
+
+>>> for x in xrange(3):
+...    print x
+0
+1
+2
+
+The best way to iterate over a list and keep track of indices is to use the `enumerate <http://docs.python.org/library/functions.html#enumerate>`_ function.
+
+>>> for index, name in enumerate(seasons)
+...    print index, name
+0 spring
+1 summer
+2 fall
+3 winter
+
+You can even iterate over dictionaries if you use the ``items`` function.
+>>> for key, value in {1: 'a', 2: 'b', 3: 'c'}.items()
+...    print key, value
+1 a
+2 b
+3 c
 
 Comprehensions
 ;;;;;;;;;;;;;;
