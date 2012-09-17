@@ -1,3 +1,4 @@
+
 Becoming a Pythonista
 =====================
 
@@ -98,9 +99,9 @@ The operators ``+`` (addition), ``-`` (subtraction), and ``*`` (multiplication),
 Sequence Types
 ;;;;;;;;;;;;;;
 
-A ``sequence`` is a key concept in Python. There are many different kinds of sequences, but the basic idea is simply a bunch of data.
+A sequence_ is a key concept in Python. There are many different kinds of sequences, but the basic idea is simply a bunch of data.
 
-The list and the tuple are two of the most common sequence_ types. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
+The list and the tuple are two of the most common sequence types. Lists are denoted by square brackets, while tuples are usually denoted by parenthesis, though they are not required. Both of them allow access by numeric keys, starting from 0.
 
 >>> alist = [1,2,3]
 >>> atuple = (1,2,3)
@@ -133,6 +134,15 @@ AttributeError: 'tuple' object has no attribute 'append'
 
 Lists also have a number of other useful methods. `More on Lists <http://docs.python.org/tutorial/datastructures.html#more-on-lists>`_.
 
+Similar to a List is the ``set``. A ``set`` is mutable, but has no specific ordering. It's faster to test membership (``in``) with a set, so a ``set`` is a good choice if the order of the elements isn't important.
+
+>>> prepositions = set(["to", "from", "on", "of"])
+>>> 'dog' in prepositions
+False
+>>> prepositions.add('at')
+>>> 'at' in prepositions
+True
+
 Strings
 ;;;;;;;
 
@@ -151,6 +161,15 @@ And interpolation:
 ...		{'user' : user, 'visitor' : visitor}
 "Welcome, Bob, you are visitor #3 to Platipy"
 
+You can use escape sequences inside of string literals. To prevent them from being escaped, you can prefix the string with an 'r' (great for dealing with regular expressions and windows file systems). You can also specify that the string should be unicode with a 'u' prefix.
+
+>>> print "New\nLine"
+New
+Line
+>>> print r"New\nLine"
+New\nLine
+>>> print u"Unicode"
+Unicode
 
 Sequence Unpacking
 ;;;;;;;;;;;;;;;;;;
