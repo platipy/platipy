@@ -19,18 +19,22 @@ Once you've extracted the launcher, you should rename the Example.activity direc
 
 The launcher contains a variety of other folders and directories. Many of them will be important later, and a few of them you can ignore entirely. Here's a summary of what's included:
 
-  | *Example.activity/activity.py* - The activity launcher required for the XO. You should never have to edit this file.
-  | *Example.activity/dev_launcher.py* - This is the launcher that you will use during development. It supports a variety of options, you should never have to edit this file.
-  | *Example.activity/init.py* - A script which does some setup for running your game as an activity on the XO. You should never have to edit this file.
-  | *Example.activity/setup.py* - A script which will provide a number of way for you to deploy your game for testing or when you are ready for release. We'll come back to setup.py in a later chapter. 
-  | *Example.activity/activity/* - This directory contains some metadata required for the XO. It can be modified directly, or generated for you by init.py. Until you have run init.py, this directory will be empty.
-  | *Example.activity/dist/* - When you are building with *setup.py*, the output will go in here. Any files in this directory will be ignored when building.
-  | *Example.activity/game/* - This is the directory where all your game assets will go. All the code, artwork, fonts, etc. should be placed in here. This is to facilitate updating the launcher in the future and keeping the directory structure clean.
-  | *Example.activity/libraries/* - This directory contains any pure python libraries that you wish to distribute with your game.
-  | *Examples.activity/locale/* - This is a build output directory, like *dist*, except for built translations. You should never be placing things in here by hand
-  | *Examples.activity/po/* - This directory contains source files for translations. You can read more about this in the section on Translating
-  | *Examples.activity/profiles/* - This directory will contain the output from the performance profiler built into the development launcher.
-  | *Examples.activity/skel/* - This directory contains support files for init.py. You can safely ignore it.
+================================  ===========
+File                              Description
+================================  ===========
+Example.activity/activity.py      The activity launcher required for the XO. You should never have to edit this file.
+Example.activity/dev_launcher.py  This is the launcher that you will use during development. It supports a variety of options, you should never have to edit this file.
+Example.activity/init.py          A script which does some setup for running your game as an activity on the XO. You should never have to edit this file.
+Example.activity/setup.py         A script which will provide a number of way for you to deploy your game for testing or when you are ready for release. We'll come back to setup.py in a later chapter. 
+Example.activity/activity/        This directory contains some metadata required for the XO. It can be modified directly, or generated for you by init.py. Until you have run init.py, this directory will be empty.
+Example.activity/dist/            When you are building with *setup.py*, the output will go in here. Any files in this directory will be ignored when building.
+Example.activity/game/            This is the directory where all your game assets will go. All the code, artwork, fonts, etc. should be placed in here. This is to facilitate updating the launcher in the future and keeping the directory structure clean.
+Example.activity/libraries/       This directory contains any pure python libraries that you wish to distribute with your game.
+Examples.activity/locale/         This is a build output directory, like *dist*, except for built translations. You should never be placing things in here by hand
+Examples.activity/po/             This directory contains source files for translations. You can read more about this in the section on Translating
+Examples.activity/profiles/       This directory will contain the output from the performance profiler built into the development launcher.
+Examples.activity/skel/           This directory contains support files for init.py. You can safely ignore it.
+================================  ===========
 
 Running the Example
 -------------------
