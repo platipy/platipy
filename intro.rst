@@ -87,9 +87,11 @@ Spyral
 
 In addition to Python and pygame, the recommendation for this course and the rest of this tutorial will cover the use of spyral. Spyral is a library built on top of pygame to provide a number of features which are useful for this course. Most importantly, spyral helps provide the following:
 
-* Some built-in core concepts of game design. Pygame is really just a wrapper for doing 2D drawing, with a few nice features like sound and input support, but doesn't provide much in terms of higher level game design concepts. Spyral provides a scene system, improved game clocks, a camera system, and more.
+* Some built-in core concepts of game design. Pygame is really just a wrapper for doing 2D drawing, with a few nice features like sound and input support, but doesn't provide much in terms of higher level game design concepts. Spyral provides a scene system, improved game clocks, a camera system, an events system, and more.
 
 * An optimized method of drawing. Because pygame on the XO is not hardware accelerated, pygame's software rendering is the slowest part of every game. Spyral provides a no-hassle method of doing dirty rendering which can increase performance significantly for sprite-based 2D games
+
+Spyral is a complete wrapper on-top of pygame, meaning that the usage of pygame should be completely hidden from the user. For advanced users, pygame is in full use behind the scenes, and with clever reading of the spyral source code, you can use it in your games, but we feel as if spyral should be sufficient for most users in this course.
 
 Additional Reading
 ------------------

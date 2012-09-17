@@ -3,24 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Platipy's documentation!
-===================================
+Platipy Project
+===============
 
-Contents:
+The platipy project is an effort to document efforts to build a game in Python and spyral for the OLPC XO. Read the introduction if you're interested in the motivation and some details behind choices made, or skip right to the guide if you're ready to start programming.
 
-Testing
-
+Building Games
+--------------
 .. toctree::
    :maxdepth: 2
-
+   
    intro
    pythonista
-   pong
-   pygame_and_spyral
-   snake
-   targetting
-   gamedev
-
+   getting_started
 
 ..    Indices and tables
     ==================
