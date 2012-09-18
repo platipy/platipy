@@ -8,7 +8,9 @@ In order for the Launcher to find your game, you must make the *game/* directory
 Scenes and the Director
 -----------------------
 
-Scenes and the director are the most fundamental way in which we organize a game. At any given time, a scene is what is running and controlling the game. Spyral's director is the manager for scenes, that handles moving between scenes. It maintains a stack of scenes which are running. For our game, we'll end up creating two scenes, one for a simple menu, and one that will actually be our game. For now, let's make an empty class for our game, and push it onto the director's stack. For organization, we'll split this into a few files.
+The ``Director`` and ``Scenes`` are the most fundamental way in which to organize a game in Spyral. At any given time, a Scene is running and controlling the game. The Director is a stack that manages and moves between Scenes. The top Scene on the stack is the currently Scene, and transitions require adding pushing new Scenes or popping old ones. Your game will have many Scenes (perhaps representing a main menu, a character select screen, an individual level, or a pause menu), but there is only ever one Director.
+
+Our Pong game will eventually have two Scenes: a simple menu, and the actual Pong game. For now, let's make an empty class to represent the second of those two Scenes. Then we can have the *main* function push that Scene onto the top of the Director's stack. To keep our code organized, we'll split this into multiple files.
 
 .. topic:: __init__.py
 
@@ -20,12 +22,11 @@ Scenes and the director are the most fundamental way in which we organize a game
     .. literalinclude:: pong/1/pong.py
         :linenos:
     
-    
-Scenes consist of a few important methods. The two most important are *update* and *render*. These are often referred to as the update and render loops, because they are called regularly by the director. The director handles calling these two functions on regular intervals. You can specify how often they are called by controlling the clock (TODO: link). For now, just know that by default, render and update are both called around 30 times per second.
+Scenes have four important functions to implement. The first two (and the most important) are *update* and *render*. These are called by the Director at regular intervals, in the Update and Render loops. You can change the length of the intervals by controlling the clock (TODO: clock link), but we should be fine with the default interval of 30 times per second.
 
-The render function is where your scene should handle any tasks which are related to drawing. Often, this function will be quite simple, consisting only of drawing groups, which we will learn about soon. The update function is where non-drawing based calculations will take place. This is where you'll write code which does physics simulations and handles user input.
+The render function is where your Scene should handle any tasks related to drawing. Often, this function will be quite simple, consisting only of drawing groups, which we will learn about soon. The update function is where non-drawing based calculations will take place. This is where you'll write code which does physics simulations and handles user input.
 
-Other important functions are of course the constructor, and a function called on enter. We'll go ahead and fill those in with stubs for now.
+The other two functions in a Scene are the constructor (*__init__*) and *on_enter*. We'll keep them as stubs for now.
 
 .. topic:: pong.py
 
