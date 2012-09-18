@@ -44,8 +44,35 @@ Now that we've gotten a template for our scene set up, we need to define a camer
         :linenos:
         :emphasize-lines: 8
 
-For now, this is all we need to know about cameras.
+For now, the only other thing we need to know about cameras is that they support us setting the background through a ``set_background`` method, but to do this, we'll first need to learn about images.
 
+Images
+------
+Images in spyral are the basic building blocks of what we're going to draw. They're really simple, so go ahead and read the API page on :ref:`spyral_Image`. Having done this, we know that we can make a new image that is the size of the camera, fill it with a color for our background, and we'll set it as the camera's background.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/4/pong.py
+        :linenos:
+        :emphasize-lines: 11-13
+
+Now that we know how to create images, we can easily create images that represent the paddles and the ball in pong, but we don't yet know how to draw them. For this, we'll talk about Sprites and Groups
+
+Sprites and Groups
+------------------
+
+Sprites are a combination of an image which we want to draw, along with some information about where and how we wish for them to be drawn. Sprites allow us to control things like positioning, scaling, rotation, and more. There are also more advanced sprite groups for a variety of different purposes, like animation. For now, we'll work with basic sprites, but you can read more about some of the available sprites in :ref:`spyral_Sprites`.
+
+Groups are a way of organizing sprites together. Groups are what we will ask to draw, and they will draw all of the sprites assigned to them. Each group must be associated with a camera so that it knows where to draw its sprites. Like with sprites, there are some different groups that can be used for other purposes. You can read about all the methods on groups and about the other types of groups in :ref:`spyral_Groups`.
+
+For now, we'll create an image that represents a paddle. We'll then create two sprites, and assign the image to both sprites. We'll position the sprites close to the left and right of the screen, and we'll use the sprite's anchor attribute to help us with positioning. We'll then create a group, and we'll add both sprites to this group. We'll also tell the group to draw in the ``render`` method of our scene.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/5/pong.py
+        :linenos:
+        :emphasize-lines: 12-36, 45-46
+        
 
 
 
@@ -68,6 +95,3 @@ We'll take everything we've done and put it together. We'll add the balls collid
 Scenes and the director part 2
 ------------------------------
 Now we can show how to make the menu, since we know how to render text, and how to accept input, so we can make a menu that just says press space to enter game, and pushes into the game, and shows how the game can pop to exit, and how popping from the menu will close the game.
-
-.. automodule:: spyral.scene
-   :members:

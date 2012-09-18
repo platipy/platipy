@@ -34,21 +34,25 @@ Important Built-in Activities
 
 .. image:: images/icon-terminal.png
   :align: right
+  
 Terminal
   The most important Activity, this is a Linux terminal. You can use it to access the underlying Linux filesystem. 
   
 .. image:: images/icon-log.png
   :align: right
+  
 Log
   This is the second most important Activity. When you get error messages, this is where they will show up. The entries on the left are from the Activities and Services that are running or have finished since you turned on the XO. Click on them to see their output. This is the only way to get to error messages!
 
 .. image:: images/icon-browse.png
   :align: right
+  
 Browse
   When you need to browse the internet, you'll use this web browser. It's basically a dumbed-down version of Firefox. You can also install Opera or Firefox if you want, but it probably won't be necessary.
  
 .. image:: images/icon-maze.png
   :align: right
+  
 Maze
   The maze is a fun little activity where you guide a shape out of a maze. Everytime you complete a level, a larger one is generated. For some reason, people love the Maze a lot, and it makes for a good distraction.
 
