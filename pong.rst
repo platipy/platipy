@@ -86,8 +86,20 @@ For now, we'll
         :linenos:
         :emphasize-lines: 12-36, 45-46
         
+Animating the Ball
+------------------
+Next, we'd like to add a ball, but we'll treat it a bit differently than the paddles. The ball is going to move on it's own, so we'll make a `Ball` class, a child of the `Sprite` class. We'll use the `update` method to move the ball around, and so we'll make sure that in the scene's `update`, we call the group's `update`, which calls `update` on all of the sprites. A little bit convoluted, but it helps a lot when structuring larger programs.
 
-Animation and Collision Detection
+The ball's constructor will handle picking a random angle and setting two velocity attributes on the sprite, and the update method will handle moving them. Our new code so far looks like this.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/6/pong.py
+        :linenos:
+        :emphasize-lines: 2-3, 8-31, 70, 75, 93
+        
+
+Animation
 ---------------------------------
 We'll have them animate the ball here, and show how we can use collision detection to have the ball bounce off the four edges of the screen. 
 
