@@ -418,16 +418,26 @@ You usually want to return something.
 >>> def mean(first, second):
 ...    return (first + second) / 2
 
-You can also have default parameters.
+You can also have default arguments for your parameters.
 
 >>> def mean(first= 0, second= 9):
 ...    return (first + second) / 2
 >>> mean()
 5
 
+Be wary, however, of mutable default arguments. You should almost always use None instead of mutable types, and check against None to set the actual default argument.
+>>> def foo(l=[]):
+...    l.append(1)
+...    return l
+... 
+>>> foo()
+[1]
+>>> foo()
+[1, 1]
+
 And you can even have arbitrary arguments.
 
->>> def mean(*numbers): #numbers will be a list!
+>>> def mean(*numbers): #numbers will be a tuple!
 ...   return sum(numbers) / len(numbers)
 >>> mean(1, 8, 10, 15)
 8
@@ -436,6 +446,17 @@ You can use named parameters when calling a function.
 
 >>> mean(first= 10, second= 14)
 12
+
+And you can also accept arbitrary named parameters.
+
+>>> def foo(*args, **kwargs):
+...     print args
+...     print kwargs
+... 
+>>> foo(1,2,3, a=4, b=5)
+(1, 2, 3)
+{'a': 4, 'b': 5}
+
 
 Python treats functions as first-class objects, which means you can pass them around like anything else:
 
@@ -449,20 +470,38 @@ Python treats functions as first-class objects, which means you can pass them ar
 >>> bool(mean)
 True
 
-If you don't know what Lambda (anonymous functions) and Closures are, be sure to check out those sections. They are very handy!
+
+Closures
+;;;;;;;;
+
+Functions in Python have access to names which are in their calling scope. 
+
+>>> def make_incrementor(start = 0):
+...     def inc(amount):
+...         return start + amount
+...     return inc
+... 
+>>> i = make_incrementor()
+>>> i(5)
+5
+>>> i2 = make_incrementor(5)
+>>> i2(5)
+10
 
 
 Exceptions
 ;;;;;;;;;;
 
-Same as most languages:
+Python's exceptions are the same as most other languages
 
 >>> try:
 ...    dangerous_statement
-... except Exception, e:    # specific exception
+... except NameError, e:    # accept a specific type of exception
 ...    print e
-... except:
-...    print "Oh no!"       # all exceptions
+... except Exception, e:    # accept all exceptions. You should almost never do this
+...    print "Oh no!"       
+... finally:                # cleanup code that should run regardless of exception, even when there wasn't one
+...    print 'Always run this bit'
 
 Don't use the ``as`` keyword, it was introduced in Python 3.
 
@@ -544,14 +583,14 @@ After you have a class, you can make instances of it:
 ...    pass
 >>> my_dog = Dog()
 
-Classes usually have functions
+Classes usually have methods. Methods are functions which always take an instance of the class as the first argument. By convention, this is always named self. Accessing methods or member variables is done by using ``self.<name>``
 
 >>> class Dog(object):
-...    def sniff():
+...    def sniff(self):
 ...        print "Smells funny"
 >>> Spot = Dog()
 
-The constructor for a class is named ``__init__``. It's first parameter should always be ``self``, which will be the instance that is being constructed. You can use ``self.<variable_name>`` to define properties of the class. If you don't put the ``self.`` in front, you'll just make a property local to that function.
+The constructor for a class is named ``__init__``.
 
 >>> class Dog(object):
 ...    def __init__(self):
@@ -559,17 +598,10 @@ The constructor for a class is named ``__init__``. It's first parameter should a
 ...    def paint_it_black(self):
 ...        self.breed = "Black Lab"
 
-Don't try and put properties outside of the ``__init__`` or other function, unless you want them to be `class` properties instead of `instance` properties.
-
->>> class Dog(object):
-...    breeds = ['Black Lab', 'Corgi', 'Golden Retriever']
->>> Dog.breeds
-['Black Lab', 'Corgi', 'Golden Retriever']
-
-Python does inheritance, too.
+Don't try and put properties outside of the ``__init__`` or other function, unless you want them to be `class` properties instead of `instance` attributes. `Read about the distinction here <http://stackoverflow.com/questions/207000/python-difference-between-class-and-instance-attributes>`
 
 >>> class Animal(object):
-...    def breathe():
+...    def breathe(self):
 ...        print "*Gasp*"
 >>> class Dog(Animal):
 ...    pass
@@ -592,9 +624,48 @@ In this class, we'll be using the launcher. So don't bother using this!
 Assertions
 ;;;;;;;;;;
 
-Built-in Documentation
-;;;;;;;;;;;;;;;;;;;;;;
-Using dir() etc.
+Python has assertions, which are useful for verifying argument types, data structure invariants, and generally making assumptions explicit in your programs. The syntax is straightforward.
+
+>>> assert 1 == True
+>>> assert 0 == True
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AssertionError
+
+The Python Wiki has a good article on `using assertions effectively <http://wiki.python.org/moin/UsingAssertionsEffectively>`
+
+Built-in Documentation and Docstrings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+In the interpreter, it is often useful to quickly check and see some documentation on objects you're working with. The built-in help function can quickly provide some information and a list of methods on both Python's built-in classes, and user-defined classes which are documented properly.
+
+>>> a = [1,2,3]
+>>> help(a)
+Help on list object:
+class list(object)
+ |  list() -> new empty list
+ |  list(iterable) -> new list initialized from iterable's items
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ 
+ For your own classes and functions, you should provide docstrings so that this functionality works, and also so that anyone reading your code has this information available. If a class, function, or method definition has a string before any other code, that string is interpreted as the docstring, and stored in ``.__doc__`` for that object. By convention, docstrings are written as triple-quoted strings (``"""string"""``)
+ 
+ Help on function bake_bread in module __main__:
+
+>>> def bake_bread(self, ingredients):
+...     """
+...     This function bakes a loaf of bread given an iterable of ingredients.
+...     """
+...     pass
+... 
+>>> bake_bread.__doc__
+'\n    This function bakes a loaf of bread given an iterable of ingredients.\n    '
+>>> help(bake_bread)
+bake_bread(self, ingredients)
+    This function bakes a loaf of bread given an iterable of ingredients.
+
 
 Importing, Modules, and Packages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
