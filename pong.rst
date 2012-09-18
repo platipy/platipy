@@ -1,11 +1,11 @@
 Your First Game: Pong
 =====================
 
-Now that you've got the example launcher up and working, let's start from scratch and write a game. For the example, we'll write Pong, the example which is included. But for now, go ahead and clear out the *game/* directory, and you can follow along here as we rewrite it.
+Now that you've got the example launcher up and working, let's start from scratch and write a game. For the example, we'll write Pong. To begin, clear out the *game/* directory and follow along as we rewrite it.
 
-As the first step, the launcher API is quite simple. It requires that the *game/* directory be an importable python module, so let's go ahead and make an *__init__.py*. The second requirement is that the module has a function named *main* which pushes the first ``Scene`` for the game on the stack.
+In order for the Launcher to find your game, you must make the *game/* directory be an importable python module by creating *game/__init__.py* (you can read more about Python Packaging `here <http://docs.python.org/tutorial/modules.html#packages>`_). The Launcher expects this file to have a *main* function which pushes the first ``Scene`` for the game on the ``Director``'s stack.
 
-Scenes and the director
+Scenes and the Director
 -----------------------
 
 Scenes and the director are the most fundamental way in which we organize a game. At any given time, a scene is what is running and controlling the game. Spyral's director is the manager for scenes, that handles moving between scenes. It maintains a stack of scenes which are running. For our game, we'll end up creating two scenes, one for a simple menu, and one that will actually be our game. For now, let's make an empty class for our game, and push it onto the director's stack. For organization, we'll split this into a few files.
