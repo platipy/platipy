@@ -88,9 +88,10 @@ For now, we'll
         
 Animating the Ball
 ------------------
-Next, we'd like to add a ball, but we'll treat it a bit differently than the paddles. The ball is going to move on it's own, so we'll make a `Ball` class, a child of the `Sprite` class. We'll use the `update` method to move the ball around, and so we'll make sure that in the scene's `update`, we call the group's `update`, which calls `update` on all of the sprites. A little bit convoluted, but it helps a lot when structuring larger programs.
 
-The ball's constructor will handle picking a random angle and setting two velocity attributes on the sprite, and the update method will handle moving them. Our new code so far looks like this.
+Next, we'll add a ball, but we'll treat it differently than the paddles. The ball is going to move on it's own, so we'll make a `Ball` class, inheriting from the `Sprite` class and implementing it's *update* method. A Sprite's *update* method is called by its Group's *update*, which is in turn called by the Scene's *update*. A little bit convoluted, but it helps a lot when structuring larger programs.
+
+The ball's constructor will handle picking a random angle and setting two velocity attributes on the sprite, and the update method will handle moving them. So far, our new code looks like this.
 
 .. topic:: pong.py
 
