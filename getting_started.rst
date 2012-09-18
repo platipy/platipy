@@ -13,7 +13,7 @@ If you cannot get older versions installed, Python 2.7 and the latest version of
 Setting up the Launcher
 -----------------------
 
-The CISC374 Launcher is a tool provided for you that takes a lot of the boilerplate out of writing your game. You can download it `here <http://link_uploaded_soon>`, and extract it to whereever you will be working.
+The CISC374 Launcher is a tool provided for you that takes a lot of the boilerplate out of writing your game. You can download it :download:`here <files/Example.activity.tar.gz>`, and extract it to whereever you will be working.
 
 Once you've extracted the launcher, you should rename the Example.activity directory to a name of your choice. Since you probably don't yet know the name of your game, you can name it after yourself for now. Once it has been renamed, you should run *init.py* in a terminal. It will prompt you for some values for setting up your activity. Right now, these aren't too important, but come back to this section later when you're ready to pick a name and run your activity on the XO.
 
