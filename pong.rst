@@ -1,17 +1,52 @@
 Your First Game: Pong
 =====================
 
-Setting up the launcher template
---------------------------------
-Covers downloading the launcher, initializing a new activity with it, and using the dev_launcher (renamed from test_launcher).
+Now that you've got the example launcher up and working, let's start from scratch and write a game. For the example, we'll write Pong, the example which is included. But for now, go ahead and clear out the *game/* directory, and you can follow along here as we rewrite it.
+
+As the first step, the launcher API is quite simple. It requires that the *game/* directory be an importable python module, so let's go ahead and make an *__init__.py*. The second requirement is that the module has a function named *main* which pushes the first ``Scene`` for the game on the stack.
 
 Scenes and the director
 -----------------------
-Covers what a scene does, the update and render loops. We'll have them set up templates for two different Scenes here, one for an introduction screen and one for the game. For now, we'll have the first scene they enter be the game, and we'll talk more about Scenes and the director later.
 
-Sprites and Groups
-------------------
-We'll have them load images for the ball and the paddle (they'll be provided. We won't have them generate them with pygame.draw commands. We'll probably try to avoid using them at all in this tutorial) and make them into sprites set at different positions on the screen. 
+Scenes and the director are the most fundamental way in which we organize a game. At any given time, a scene is what is running and controlling the game. Spyral's director is the manager for scenes, that handles moving between scenes. It maintains a stack of scenes which are running. For our game, we'll end up creating two scenes, one for a simple menu, and one that will actually be our game. For now, let's make an empty class for our game, and push it onto the director's stack. For organization, we'll split this into a few files.
+
+.. topic:: __init__.py
+
+    .. literalinclude:: pong/1/__init__.py
+        :linenos:
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/1/pong.py
+        :linenos:
+    
+    
+Scenes consist of a few important methods. The two most important are *update* and *render*. These are often referred to as the update and render loops, because they are called regularly by the director. The director handles calling these two functions on regular intervals. You can specify how often they are called by controlling the clock (TODO: link). For now, just know that by default, render and update are both called around 30 times per second.
+
+The render function is where your scene should handle any tasks which are related to drawing. Often, this function will be quite simple, consisting only of drawing groups, which we will learn about soon. The update function is where non-drawing based calculations will take place. This is where you'll write code which does physics simulations and handles user input.
+
+Other important functions are of course the constructor, and a function called on enter. We'll go ahead and fill those in with stubs for now.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/2/pong.py
+        :linenos:
+
+
+Cameras
+-------
+Now that we've gotten a template for our scene set up, we need to define a camera. Cameras in spyral are where we will draw to. They support offsets and scaling, but for a simple game, we'll only need one camera. To make a camera, we'll ask the parent camera to make a new camera. We use this because the parent camera will know some details about the actual screen we're drawing to, whose resolution we don't directly control. We'll make a child camera where we specify the resolution that we'll be using internally for our game. Spyral and the launcher will handle scaling the game and setting up the screen's resolution to something that your machine can use. Since we're going to be targetting the XO, we'll use 1200x900 as the screen resolution.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/3/pong.py
+        :linenos:
+        :emphasize-lines: 8
+
+For now, this is all we need to know about cameras.
+
+
+
 
 Animation and Collision Detection
 ---------------------------------
@@ -32,3 +67,6 @@ We'll take everything we've done and put it together. We'll add the balls collid
 Scenes and the director part 2
 ------------------------------
 Now we can show how to make the menu, since we know how to render text, and how to accept input, so we can make a menu that just says press space to enter game, and pushes into the game, and shows how the game can pop to exit, and how popping from the menu will close the game.
+
+.. automodule:: spyral.scene
+   :members:

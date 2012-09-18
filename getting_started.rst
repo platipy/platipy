@@ -46,3 +46,4 @@ The second important launcher option is "-h". It will show you other options ava
 Modifying the Example
 ---------------------
 
+Once you're ready to start modifying the example code, head into the *game* directory. Here, you will find the code which is actually of interest to you. In the next chapter, we'll build the game you see in the example from the ground up.

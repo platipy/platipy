@@ -2,6 +2,9 @@
    sphinx-quickstart on Wed Aug 29 15:35:26 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+   
+.. highlight:: python
+   :linenothreshold: 5
 
 Platipy Project
 ===============
@@ -16,6 +19,7 @@ Building Games
    intro
    pythonista
    getting_started
+   pong
 
 ..    Indices and tables
     ==================
