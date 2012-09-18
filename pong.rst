@@ -125,7 +125,15 @@ Event Handling
 --------------
 Now we're ready to start reacting to user input. To do so, we use an event handler, which scenes have by default, in the ``event_handler`` attribute. The most commonly used event handler method is ``get``, which returns a list of events. There are a variety of different events, which you can read a bit about in :ref:`spyral_events`.
 
-We'll be dealing with three event types, ``QUIT``, ``KEYUP``, and ``KEYDOWN``. The ``QUIT`` event is generated when someone asks the operating system to close the game, and we should respect that and close our game.
+We'll be dealing with three event types, ``QUIT``, ``KEYUP``, and ``KEYDOWN``. The ``QUIT`` event is generated when someone asks the operating system to close the game, and we should respect that and close our game. The ``KEYDOWN`` and ``KEYUP`` events have two interesting attributes, ascii and key. These are both used to represent the key that was pressed. If the key is a standard ascii letter, numeral, or symbol, then ascii will contain that. If the key is a special key, the keycode is available directly in the key attribute. :ref:`spyral_keys` has a table with a few of the special key codes.
+
+So, to move the paddles, we'll save when a key is pressed in the up direction or in the down direction, and we'll move it once in the update function, using the same methods as we used for the ball. 
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/9/pong.py
+        :linenos:
+        :emphasize-lines: 126-173
 
 Moving Forward
 --------------
