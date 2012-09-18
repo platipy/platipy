@@ -22,11 +22,11 @@ Our Pong game will eventually have two Scenes: a simple menu, and the actual Pon
     .. literalinclude:: pong/1/pong.py
         :linenos:
     
-Scenes have four important methods to implement. The first two (and the most important) are *update* and *render*. These are called by the Director at regular intervals, in the Update and Render loops. You can change the length of the intervals by controlling the clock (TODO: clock link), but we should be fine with the default interval of 30 times per second.
+Scenes have four important methods to implement. The first two (and the most important) are `update` and `render`. These are called by the Director at regular intervals, in the Update and Render loops. You can change the length of the intervals by controlling the clock (TODO: clock link), but we should be fine with the default interval of 30 times per second.
 
 The render method is where your Scene should handle any tasks related to drawing. Often, this method will be quite simple, consisting only of drawing groups, which we will learn about soon. The update method is where non-drawing based calculations will take place. This is where you'll write code which does physics simulations and handles user input.
 
-The other two methods in a Scene are the constructor (*__init__*) and *on_enter*. We'll keep them as stubs for now.
+The other two methods in a Scene are the constructor (`__init__`) and `on_enter`. We'll keep them as stubs for now.
 
 .. topic:: pong.py
 
@@ -39,7 +39,7 @@ Cameras
 
 Another important concept in Spyral are ``Cameras``. Every Scene has one or more Cameras, all based on a Parent Camera. Having multiple cameras can be useful for making split screens and Head's-Up Displays (HUDs), since they support offsets, clipping, and scaling. Pong doesn't require any of these fancy features, so we'll only need one child camera. To make a child Camera, you must specify the resolution; since we're targetting the XO, we'll use 1200x900 as the screen resolution.
 
-*Note that when we override an inherited method, we use *super* to first call the parent version of the method.*
+*Note that when we override an inherited method, we use `super` to first call the parent version of the method.*
 
 .. topic:: pong.py
 
@@ -89,7 +89,7 @@ For now, we'll
 Animating the Ball
 ------------------
 
-Next, we'll add a ball, but we'll treat it differently than the paddles. The ball is going to move on it's own, so we'll make a `Ball` class, inheriting from the `Sprite` class and implementing it's *update* method. A Sprite's *update* method is called by its Group's *update*, which is in turn called by the Scene's *update*. A little bit convoluted, but it helps a lot when structuring larger programs.
+Next, we'll add a ball, but we'll treat it differently than the paddles. The ball is going to move on it's own, so we'll make a `Ball` class, inheriting from the `Sprite` class and implementing it's `update` method. A Sprite's `update` method is called by its Group's `update`, which is in turn called by the Scene's `update`. A little bit convoluted, but it helps a lot when structuring larger programs.
 
 The ball's constructor will handle picking a random angle and setting two velocity attributes on the sprite, and the update method will handle moving them. So far, our new code looks like this.
 
@@ -101,10 +101,11 @@ The ball's constructor will handle picking a random angle and setting two veloci
         
 Collision Detection
 -------------------
+
 Next, we'd like to have our ball interact with the sides of the game board, and with the paddles. We'll do two different types
 of collision detection here just to showcase them. Which you use will depend largely on the game.
 
-First, we'll have the ball bounce of the top and the bottom of the screen. For this, we'll do simple checks on the y coordinate of the ball. You may remember that we used a center anchor on the ball though, so the coordinates are relative to the center of the ball. To remedy this, we'll use the sprite method `get_rect()`, which gives us a rectangle that represents the drawn area of the sprite, and we can check it's top and bottom attributes. When we see that they have passed the top or the bottom walls, we'll go ahead and flip the x component of the velocity.
+First, we'll have the ball bounce off the top and bottom of the screen. For this, we'll do simple checks on the y coordinate of the ball. You may remember that we used a center anchor on the ball, so the coordinates are relative to the center of the ball. To remedy this, we'll use the Sprite method `get_rect()`, which gives us a rectangle that represents the drawn area of the sprite, and we can check it's top and bottom attributes. When we see that they have passed the ceiling or the floor, we'll flip the x component of the velocity.
 
 .. topic:: pong.py
 
@@ -112,15 +113,13 @@ First, we'll have the ball bounce of the top and the bottom of the screen. For t
         :linenos:
         :emphasize-lines: 43-62, 99-100
         
-Next, we'll have the ball collide with the two paddles. We'll make another method on the `Ball` class called `collide_paddle`, and we'll have it take a sprite. It will check for collisions using a the `Rect.collide_rect` method for rects, and flip the ball's x coordinate if it collides. In our Scene's `update` method, we'll then need to call this on the sprite, giving it the paddles.
+Next, we'll have the ball collide with the two paddles. We'll make another method in the `Ball` class called `collide_paddle`, and we'll have it take in a Sprite. It will check for collisions using the `Rect.collide_rect` method for rects, and flip the ball's x coordinate if it collides. We'll call `collide_paddle` in our Scene's `update` method, giving it the paddles.
 
 .. topic:: pong.py
 
     .. literalinclude:: pong/8/pong.py
         :linenos:
         :emphasize-lines: 122-123, 64-66
-        
-
         
 
 Animation
