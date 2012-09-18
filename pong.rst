@@ -120,25 +120,13 @@ Next, we'll have the ball collide with the two paddles. We'll make another metho
         :linenos:
         :emphasize-lines: 122-123, 64-66
         
-
-        
-
-Animation
----------------------------------
-We'll have them animate the ball here, and show how we can use collision detection to have the ball bounce off the four edges of the screen. 
-
-Keyboard Input
+Event Handling
 --------------
-We'll show how we can use keyboard input to control and move the paddles. 
+Now we're ready to start reacting to user input. To do so, we use an event handler, which scenes have by default, in the ``event_handler`` attribute. The most commonly used event handler method is ``get``, which returns a list of events. There are a variety of different events, which you can read a bit about in :ref:`spyral_events`.
 
-Fonts and Scoring
------------------
-We'll show how to render the score text and place it on screen
+We'll be dealing with three event types, ``QUIT``, ``KEYUP``, and ``KEYDOWN``. The ``QUIT`` event is generated when someone asks the operating system to close the game, and we should respect that and close our game.
 
-Putting it all together
------------------------
-We'll take everything we've done and put it together. We'll add the balls colliding with the paddle, and colliding with the left and right edges increasing the score
+Moving Forward
+--------------
 
-Scenes and the director part 2
-------------------------------
-Now we can show how to make the menu, since we know how to render text, and how to accept input, so we can make a menu that just says press space to enter game, and pushes into the game, and shows how the game can pop to exit, and how popping from the menu will close the game.
+There are a lot of additional features we can add to the game. We should add scoring, a menu, and much more, but we'll be saving those for the next chapters.

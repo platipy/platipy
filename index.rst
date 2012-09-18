@@ -20,11 +20,10 @@ Building Games
    pythonista
    getting_started
    pong
-
-..    Indices and tables
-    ==================
-
-    * :ref:`genindex`
-    * :ref:`modindex`
-    * :ref:`search`
-
+   
+Spyral API
+----------
+.. toctree::
+   :maxdepth: 2
+   
+   spyral_docs
