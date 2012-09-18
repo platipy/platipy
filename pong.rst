@@ -85,6 +85,29 @@ The ball's constructor will handle picking a random angle and setting two veloci
         :linenos:
         :emphasize-lines: 2-3, 8-31, 70, 75, 93
         
+Collision Detection
+-------------------
+Next, we'd like to have our ball interact with the sides of the game board, and with the paddles. We'll do two different types
+of collision detection here just to showcase them. Which you use will depend largely on the game.
+
+First, we'll have the ball bounce of the top and the bottom of the screen. For this, we'll do simple checks on the y coordinate of the ball. You may remember that we used a center anchor on the ball though, so the coordinates are relative to the center of the ball. To remedy this, we'll use the sprite method `get_rect()`, which gives us a rectangle that represents the drawn area of the sprite, and we can check it's top and bottom attributes. When we see that they have passed the top or the bottom walls, we'll go ahead and flip the x component of the velocity.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/7/pong.py
+        :linenos:
+        :emphasize-lines: 43-62, 99-100
+        
+Next, we'll have the ball collide with the two paddles. We'll make another method on the `Ball` class called `collide_paddle`, and we'll have it take a sprite. It will check for collisions using a the `Rect.collide_rect` method for rects, and flip the ball's x coordinate if it collides. In our Scene's `update` method, we'll then need to call this on the sprite, giving it the paddles.
+
+.. topic:: pong.py
+
+    .. literalinclude:: pong/8/pong.py
+        :linenos:
+        :emphasize-lines: 122-123, 64-66
+        
+
+        
 
 Animation
 ---------------------------------
