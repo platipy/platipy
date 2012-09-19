@@ -2,7 +2,7 @@ Latest Versions
 ===============
 
 The latest version of Example.activity is v0.1.
-The latest version of spyral is v0.1.
+The latest version of spyral is v0.1.1.
 
 .. _downloads:
 
