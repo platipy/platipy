@@ -27,3 +27,10 @@ Spyral API
    :maxdepth: 2
    
    spyral_docs
+
+Release Information
+-------------------
+.. toctree::
+   :maxdepth: 2
+   
+   release_info
