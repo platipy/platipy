@@ -8,9 +8,11 @@ The latest version of spyral is v0.1.
 
 Downloads
 ---------
-Example.activity will always have the latest version of spyral when it is released.
 
-:download:`Download Example.activity v0.1 <files/releases/0.1/Example.activity.tar.gz>`
+To update spyral to a newer version than the one included with your launcher, remove libraries/spyral and replace with the downloaded version.
+
+* `Download spyral v0.1.1 <https://github.com/rdeaton/spyral/zipball/v0.1.1>`_
+* :download:`Download Example.activity v0.1 <files/releases/0.1/Example.activity.tar.gz>` (Includes spyral v0.1)
 
 Git Repositories
 ----------------
@@ -25,6 +27,11 @@ Changelogs
 
 Spyral
 ------
+
+v0.1.1 - 09/19/2012
+~~~~~~~~~~~~~~~~~~~
+* Fix group.remove() to ensure sprites are no longer drawn upon removal
+* Fix rect.collide_rect(), results were previously inverted.
 
 v0.1 - 09/18/2012
 ~~~~~~~~~~~~~~~~~
