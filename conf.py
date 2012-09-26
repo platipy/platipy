@@ -3,7 +3,7 @@ sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
 sys.path.insert(0, os.path.abspath('.'))
 print sys.path
-print os.listdir(os.path.abspath('.'))
+print os.listdir(os.path.abspath('./spyral/'))
 
 # -- General configuration -----------------------------------------------------
 
