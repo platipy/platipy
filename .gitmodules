@@ -1,0 +1,3 @@
+[submodule "spyral"]
+	path = spyral
+	url = git://github.com/rdeaton/spyral.git
