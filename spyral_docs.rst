@@ -99,12 +99,14 @@ Rect
 
 Animations
 ----------
+
 TODO: Write a section on animations!
 
 .. _spyral_layering:
 
 Layers
 ------
+
 TODO: Write a section on layers.
 
     
