@@ -96,7 +96,6 @@ Appendix
 Anchor Positions
 ~~~~~~~~~~~~~~~~
 
-Sprites, Images, and Rects all support anchor positions. In Sprites and Images, anchor positions are strings which will specify where drawing is relative to. For rects, these anchor positions are attributes which can be checked or assigned to. The list of anchor positions is:
+Sprites, Images, and Rects all support anchor positions. In Sprites and Images, anchor positions are strings which will specify where drawing is relative to, or a 2-tuple which specifies just the offset. For rects, these anchor positions are attributes which can be checked or assigned to. The list of anchor positions is:
 
 `topleft`, `topright`, `bottomleft`, `bottomright`, `center`, `midtop`, `midbottom`, `midleft`, `midright`
-
