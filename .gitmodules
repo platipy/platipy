@@ -1,3 +1,6 @@
 [submodule "spyral"]
 	path = spyral
 	url = git://github.com/rdeaton/spyral.git
+[submodule "_themes"]
+	path = _themes
+	url = git://github.com/translate/sphinx-themes.git
