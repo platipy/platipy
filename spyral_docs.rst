@@ -1,38 +1,35 @@
-.. _spyral_Image:
-
-Images
-------
-.. autoclass:: spyral.Image
-    :members:
-    
 Scenes and the Director
 -----------------------
+Scenes are the basic units that are executed by spyral for your game, and should be subclassed and filled in with code which is relevant to your game. The director, which is accessible at *spyral.director*, is a manager for Scenes, which maintains a stacks and actually executes the code.
+
+
 .. autoclass:: spyral.Scene
     :members:
     
 .. autoclass:: spyral.scene.Director
     :members:
     
+.. _spyral_Image:
+
+Images
+------
+.. autoclass:: spyral.Image
+    :members:
+
 .. _spyral_Sprites:
 
 Sprites
 -------
 .. autoclass:: spyral.Sprite
     :members:
-    
-.. autoclass:: spyral.AnimationSprite
-    :members:
-    
+
 .. _spyral_Groups:
 
 Groups
 ------
 .. autoclass:: spyral.Group
     :members:
-    
-.. autoclass:: spyral.AnimationGroup
-    :members:
-    
+        
 Event Handling
 --------------
 
@@ -79,8 +76,26 @@ up           up arrow key
 down         down arrow key
 =========    =========
 
-Animations
-----------
+Vec2D
+-----
 
-.. autoclass:: spyral.animations.Animation
+.. autoclass:: spyral.Vec2D
     :members:
+    
+Rect
+----
+
+.. autoclass:: spyral.Rect
+    :members:
+    
+Appendix
+--------
+
+.. _anchors:
+
+Anchor Positions
+~~~~~~~~~~~~~~~~
+
+Sprites, Images, and Rects all support anchor positions. In Sprites and Images, anchor positions are strings which will specify where drawing is relative to. For rects, these anchor positions are attributes which can be checked or assigned to. The list of anchor positions is:
+
+`topleft`, `topright`, `bottomleft`, `bottomright`, `center`, `midtop`, `midbottom`, `midleft`, `midright'
