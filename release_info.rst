@@ -28,6 +28,43 @@ Changelogs
 Spyral
 ------
 
+v0.2 - TBD
+~~~~~~~~~~
+
+Backwards Incompatible Changes
+++++++++++++++++++++++++++++++
+* spyral.Sprite and spyral.Group now must have dt passed in as their first argument.
+* Remove sprite.blend_flags, was broken anyways. May be back in future release
+
+New Features
+++++++++++++
+* Add spyral.Vec2D, sprite.pos and sprite.scale are now Vec2D automatically
+* Add spyral.Signal to spyral, as well as a number of useful signals in the docs
+* Add draw_image, rotate, copy, scale, crop, flip to spyral.Image
+* Add support for anchor-based positioning in spyral.Image methods
+* Add sprite.scale, sprite.scale_x, sprite.scale_y, and sprite.angle, with animation support
+* Add sprite.flip_x and sprite.flip_y
+* Animations no longer require AnimationSprite or AnimationGroup objects, they work on standard sprites and groups
+
+Bug Fixes
++++++++++
+* Fix VIDEORESIZE events crashing spyral
+* Fix a bug with parallel animations not evaluating their ending condition
+* Fix a bug with group.empty calling remove on sprites
+* Fix a bug where sprites were being set static even when they weren't
+* Fix a bug where static sprites were redrawn without clearing behind them
+* Fix a frame count bug in the Iteration animator, making it more smooth
+* Fix the import system, allowing the import of spyral's submodules again
+* Fix a bug in rect.move_ip, previously the offsets would become the new coordinates
+
+Miscellaneous
++++++++++++++
+* Remove the legacy spyral.util module
+* Remove spyral/docs in favor of documentation in platipy
+* Remove sprite.blend_flags, was broken anyways. May be back in future release
+* Major revisions to built-in documentation.
+
+
 v0.1.1 - 09/19/2012
 ~~~~~~~~~~~~~~~~~~~
 * Fix group.remove() to ensure sprites are no longer drawn upon removal
@@ -39,6 +76,10 @@ v0.1 - 09/18/2012
 
 Example.activity
 ----------------
+
+v0.2 - TBD
+~~~~~~~~~~
+* Fix generation of PNGs for profiling paths with spaces in them
 
 v0.1 - 09/18/2012
 ~~~~~~~~~~~~~~~~~

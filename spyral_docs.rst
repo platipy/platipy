@@ -22,6 +22,9 @@ Sprites
 -------
 .. autoclass:: spyral.Sprite
     :members:
+    
+.. autoclass:: spyral.AggregateSprite
+    :members:
 
 .. _spyral_Groups:
 
@@ -76,17 +79,34 @@ up           up arrow key
 down         down arrow key
 =========    =========
 
+.. _spyral_Vec2D:
+
 Vec2D
 -----
 
 .. autoclass:: spyral.Vec2D
     :members:
     
+.. _spyral_Rect:
+    
 Rect
 ----
 
 .. autoclass:: spyral.Rect
     :members:
+    
+.. _spyral_animation:
+
+Animations
+----------
+TODO: Write a section on animations!
+
+.. _spyral_layering:
+
+Layers
+------
+TODO: Write a section on layers.
+
     
 Appendix
 --------
