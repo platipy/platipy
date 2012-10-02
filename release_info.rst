@@ -53,6 +53,7 @@ New Features
 * Add sprite.flip_x and sprite.flip_y
 * Animations no longer require AnimationSprite or AnimationGroup objects, they work on standard sprites and groups
 * Add spyral.Font
+* Add AggregateSprite
 
 Bug Fixes
 +++++++++
