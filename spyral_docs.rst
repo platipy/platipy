@@ -32,7 +32,19 @@ Groups
 ------
 .. autoclass:: spyral.Group
     :members:
-        
+    
+Cameras
+-------
+
+.. autoclass:: spyral.Camera
+    :members:
+    
+Fonts
+-----
+
+.. autoclass:: spyral.Font
+    :members:
+    
 Event Handling
 --------------
 
@@ -100,14 +112,44 @@ Rect
 Animations
 ----------
 
-TODO: Write a section on animations!
+For some examples on using animations, see ``spyral/examples/animation.py``
+
+.. autoclass:: spyral.Animation
+    :members:
+    
+spyral.animators
+~~~~~~~~~~~~~~~~
+
+.. automodule:: spyral.animator
+    :members:
+    
+The built-in animators can be created by calling the following functions
+
+| ``def Linear(start=0.0, finish=1.0):``
+| ``def QuadraticIn(start=0.0, finish=1.0):``
+| ``def QuadraticOut(start=0.0, finish=1.0):``
+| ``def QuadraticInOut(start=0.0, finish=1.0):``
+| ``def CubicIn(start=0.0, finish=1.0):``
+| ``def CubicOut(start=0.0, finish=1.0):``
+| ``def CubicInOut(start=0.1, finish=1.0):``
+| ``def Iterate(items, times=1):``
+| ``def Sine(amplitude=1.0, phase=0, end_phase=2.0 * math.pi):``
+| ``def LinearTuple(start=(0, 0), finish = (0, 0)):``
+| ``def Arc(center=(0, 0), radius = 1, theta_start = 0, theta_end = 2 * math.pi):``
+| ``def Polar(center=(0, 0), radius = lambda theta: 1.0, theta_start = 0, theta_end = 2 * math.pi):``
 
 .. _spyral_layering:
 
 Layers
 ------
 
-TODO: Write a section on layers.
+In games with many objects, you'll want to ensure that certain spites are drawn above or below other sprites. In spyral, we handle this by utilizing layers.
+
+GameClock
+---------
+
+.. autoclass:: spyral.GameClock
+    :members:
 
     
 Appendix
