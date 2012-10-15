@@ -35,6 +35,13 @@ Changelogs
 Spyral
 ------
 
+v0.2.1 - In Progress (Changes available in git)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Fix a bug which didn't allow rects properly in the constructor to rects
+* Fix a bug with rect.inflate and rect.inflate_ip which would cause a crash
+* Fix a logic bug in animations that would cause them to not catch an exception they should
+* Fix sprite.width and sprite.height
+
 v0.2 - 10/02/2012
 ~~~~~~~~~~~~~~~~~
 
