@@ -54,13 +54,13 @@ Event Manager
 ~~~~~~~~~~~~~
 
 .. autoclass:: spyral.EventManager
-    :members
+    :members:
     
 .. autoclass:: spyral.EventHandler
     :members:
     
 .. autoclass:: spyral.LiveEventHandler
-    :members
+    :members:
     
 .. autoclass:: spyral.ReplayEventHandler
     :members:
