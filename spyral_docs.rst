@@ -50,6 +50,21 @@ Event Handling
 
 .. _spyral_events:
 
+Event Manager
+~~~~~~~~~~~~~
+
+.. autoclass:: spyral.EventManager
+    :members
+    
+.. autoclass:: spyral.EventHandler
+    :members:
+    
+.. autoclass:: spyral.LiveEventHandler
+    :members
+    
+.. autoclass:: spyral.ReplayEventHandler
+    :members:
+
 Event Types
 ~~~~~~~~~~~
 
