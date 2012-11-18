@@ -26,8 +26,8 @@ Git Repositories
 
 The repositories are hosted on github:
 
-* `spyral <http://github.com/rdeaton/spyral>`_
-* `Example.activity <http://github.com/rdeaton/Example.activity>`_
+* `spyral <http://github.com/platipy/spyral>`_
+* `Example.activity <http://github.com/platipy/Example.activity>`_
 
 Changelogs
 ==========
@@ -37,10 +37,32 @@ Spyral
 
 v0.2.1 - In Progress (Changes available in git)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Fix a bug which didn't allow rects properly in the constructor to rects
-* Fix a bug with rect.inflate and rect.inflate_ip which would cause a crash
-* Fix a logic bug in animations that would cause them to not catch an exception they should
-* Fix sprite.width and sprite.height
+* [rect] Fix a bug which didn't allow rects properly in the constructor to rects
+* [rect] Fix a bug with rect.inflate and rect.inflate_ip which would cause a crash
+* [animation] Fix a logic bug in animations that would cause them to not catch an exception they should
+* [sprite] Fix sprite.width and sprite.height
+* [docs] Fix a documentation bug which used the wrong terminology
+* [image] Fix color channels being swapped on certain systems, in particular under scaling
+* [vector] Fix Vec2D's support for being tested inside containers based on hashes (i.e. sets)
+* [vector] Fix Vec2D's support for being divided by a constant or another 2-tuple/Vec2D
+* [sprite] Fix sprite.visible not hiding sprites which were marked as static
+* [sprite] Fix AggregateSprites only rendering some children
+* [sprite] Fix AggregateSprites requiring a group be passed on their creation
+* [sprite] Fix AggregateSprites not being able to have AggregateSprites as children
+* [camera] Fix a broken return value on camera.get_rect()
+* [image] Fix image.get_size() to return a Vec2D instead of a 2-tuple
+
+
+New Features
+++++++++++++
+* Add spyral.Image.draw_arc()
+* spyral is now compatible with pypi and available in the cheeseshop
+* Add support for object-attribute access for built-in event types
+* A new rendering backend which is easier to maintain
+* :above and :below modifiers for layers
+* Add a more complete spyral.event.keys object
+* Add official support for LiveEventHandler and ReplayEventHandler, with documentation
+
 
 v0.2 - 10/02/2012
 ~~~~~~~~~~~~~~~~~
