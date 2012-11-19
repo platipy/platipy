@@ -37,20 +37,22 @@ Spyral
 
 v0.2.1 - In Progress (Changes available in git)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* [animation] Fix a logic bug in animations that would cause them to not catch an exception they should
+* [camera] Fix a broken return value on camera.get_rect()
+* [docs] Fix a documentation bug which used the wrong terminology
+* [image] Fix image.get_size() to return a Vec2D instead of a 2-tuple
+* [image] Fix image.draw_lines() not respecting the width parameter
+* [image] Fix an issue where changes to images would not be rendered to the screen
+* [image] Fix color channels being swapped on certain systems, in particular under scaling
 * [rect] Fix a bug which didn't allow rects properly in the constructor to rects
 * [rect] Fix a bug with rect.inflate and rect.inflate_ip which would cause a crash
-* [animation] Fix a logic bug in animations that would cause them to not catch an exception they should
 * [sprite] Fix sprite.width and sprite.height
-* [docs] Fix a documentation bug which used the wrong terminology
-* [image] Fix color channels being swapped on certain systems, in particular under scaling
-* [vector] Fix Vec2D's support for being tested inside containers based on hashes (i.e. sets)
-* [vector] Fix Vec2D's support for being divided by a constant or another 2-tuple/Vec2D
 * [sprite] Fix sprite.visible not hiding sprites which were marked as static
 * [sprite] Fix AggregateSprites only rendering some children
 * [sprite] Fix AggregateSprites requiring a group be passed on their creation
 * [sprite] Fix AggregateSprites not being able to have AggregateSprites as children
-* [camera] Fix a broken return value on camera.get_rect()
-* [image] Fix image.get_size() to return a Vec2D instead of a 2-tuple
+* [vector] Fix Vec2D's support for being tested inside containers based on hashes (i.e. sets)
+* [vector] Fix Vec2D's support for being divided by a constant or another 2-tuple/Vec2D
 
 
 New Features
