@@ -33,12 +33,12 @@ Spyral API
    
    spyral_docs
    
-Tutorials
+Reference
 ---------
 .. toctree::
    :maxdepth: 2
    
-   tutorials/event
+   ref
 
 Release Information
 -------------------

@@ -6,6 +6,8 @@ WIDTH = 1200
 HEIGHT = 900
 SIZE = (WIDTH, HEIGHT)
 
+model = {"left": 0, "right": 0}
+
 class Ball(spyral.Sprite):
     def __init__(self, scene):
         super(Ball, self).__init__()
@@ -15,6 +17,7 @@ class Ball(spyral.Sprite):
         self.anchor = 'center'
         
         spyral.event.register('director.update', self.update)
+        spyral.event.register('pong.score', self.reset)
         self.reset()
         
     def update(self, dt):
@@ -28,6 +31,10 @@ class Ball(spyral.Sprite):
         if r.bottom > HEIGHT:
             r.bottom = HEIGHT
             self.vel_y = -self.vel_y
+        if r.left < 0:
+            spyral.event.queue("pong.score", spyral.Event(scorer="left"))
+        if r.right > WIDTH:
+            spyral.event.queue("pong.score", spyral.Event(scorer="right"))
         # You can't change a sprite's properties by updating properties of
         # its rect; so you have to assign the rect back to the properties!
         self.pos = r.center
@@ -61,11 +68,55 @@ class Paddle(spyral.Sprite):
         self.image = spyral.Image(size=(20, 300)).fill((255, 255, 255))
         
         self.anchor = 'mid' + side
-        if side == 'left':
+        self.reset()
+        
+        self.side = side
+        self.moving = False
+        
+        if self.side == 'left':
+            scene.register("input.keyboard.down.w", self.move_up)
+            scene.register("input.keyboard.down.s", self.move_down)
+            scene.register("input.keyboard.up.w", self.stop_move)
+            scene.register("input.keyboard.up.s", self.stop_move)
+        else:
+            scene.register("input.keyboard.down.up", self.move_up)
+            scene.register("input.keyboard.down.down", self.move_down)
+            scene.register("input.keyboard.up.up", self.stop_move)
+            scene.register("input.keyboard.up.down", self.stop_move)
+        scene.register("director.update", self.update)
+        spyral.event.register('pong.score', self.reset)
+    
+    def move_up(self):
+        self.moving = 'up'
+        
+    def move_down(self):
+        self.moving = 'down'
+        
+    def stop_move(self):
+        self.moving = False
+        
+    def reset(self):
+        if self.side == 'left':
             self.x = 20
         else:
             self.x = WIDTH - 20
         self.y = HEIGHT/2
+        
+    def update(self, dt):
+        paddle_velocity = 250
+        
+        if self.moving == 'up':
+            self.y -= paddle_velocity * dt
+            
+        elif self.moving == 'down':
+            self.y += paddle_velocity * dt
+                
+        r = self.get_rect()
+        if r.top < 0:
+            r.top = 0
+        if r.bottom > HEIGHT:
+            r.bottom = HEIGHT
+        self.pos = r.center
 
 
 class Pong(spyral.Scene):
@@ -80,6 +131,11 @@ class Pong(spyral.Scene):
         self.ball = Ball(self)
 
         self.register("director.update", self.update)
+        self.register("system.quit", spyral.director.pop)
+        self.register("pong.score", increase_score)
+    
+    def increase_score(self, scorer):
+        model[scorer] += 1
     
     def update(self, dt):
         if (self.collide_sprites(self.ball, self.left_paddle) or
