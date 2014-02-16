@@ -1,3 +1,4 @@
 [submodule "spyral"]
 	path = spyral
 	url = git://github.com/platipy/spyral.git
+
