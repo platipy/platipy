@@ -6,15 +6,11 @@
 .. highlight:: python
    :linenothreshold: 5
 
+###############
 Platipy Project
-===============
+###############
 
 The platipy project is an effort to document efforts to build a game in Python and spyral for the OLPC XO. Read the introduction if you're interested in the motivation and some details behind choices made, or skip right to the guide if you're ready to start programming.
-
-.. note::
-   
-   Platipy is currently being updated for a new spyral release. Some classes and methods may not be available
-   in spyral 0.2.
 
 Building Games
 --------------
@@ -24,21 +20,33 @@ Building Games
    intro
    pythonista
    getting_started
+   targetting
    pong
    
-Spyral API
-----------
+Spyral Documentation
+--------------------
 .. toctree::
    :maxdepth: 2
    
    spyral_docs
+   ref
+   cheats
+   snake
    
-Reference
----------
+Further References
+------------------
 .. toctree::
    :maxdepth: 2
    
-   ref
+   gamedev
+   
+The Platipy Project
+-------------------
+.. toctree::
+    :maxdepth: 2
+    
+    contributor_application
+    gallery
 
 Release Information
 -------------------
