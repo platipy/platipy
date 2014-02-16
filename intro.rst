@@ -95,7 +95,7 @@ In addition to Python and pygame, the recommendation for this course and the res
 
 * An optimized method of drawing. Because pygame on the XO is not hardware accelerated, pygame's software rendering is the slowest part of every game. Spyral provides a no-hassle method of doing dirty rendering which can increase performance significantly for sprite-based 2D games
 
-Spyral is a complete wrapper on-top of pygame, meaning that the usage of pygame should be completely hidden from the user. For advanced users, pygame is in full use behind the scenes, and with clever reading of the spyral source code, you can use it in your games, but we feel as if spyral should be sufficient for most users in this course.
+Spyral is a complete wrapper on-top of pygame, meaning that the usage of pygame should be completely hidden from the user. For advanced users, pygame is in full use behind the scenes, and with clever reading of the spyral source code, you can use it in your games, but we feel that spyral should be sufficient for most users in this course.
 
 Additional Reading
 ------------------
