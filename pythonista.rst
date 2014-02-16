@@ -154,7 +154,7 @@ Strings
 
 Strings in Python are actually just immutable sequences of characters. Python has a `ton of built-in functions <http://docs.python.org/release/3.1.5/library/stdtypes.html#string-methods>`_ to work with strings. Remember, because Strings are immutable, you cannot modify them - instead, functions that work on strings return new strings.
 
-You can concatenate (join) strings in python using the ``+`` operator. However, it is much preferred to **use interpolation** with ``%`` instead. This method will allow you to provide named "arguments" to the string, which will be invaluable when it comes time to internationalize your game.
+You can concatenate (join) strings in python using the ``+`` operator. However, it is much preferred to **use interpolation** with ``%`` instead [#finterpolation]_. This method will allow you to provide named "arguments" to the string, which will be invaluable when it comes time to internationalize your game.
 
 Compare the difference between concatenation:
 
@@ -745,3 +745,7 @@ Additional Reading
 ------------------
 
 * `Hidden Features of Python on StackOverflow <http://stackoverflow.com/questions/101268/hidden-features-of-python?sort=votes#sort-top>`_ is a great QA that just details some of Python's great features. Many of them have been listed here, a few haven't. 
+
+.. rubric:: Footnotes
+
+.. [#finterpolation] In reality, ``string.format`` is more preferred for string interpolation, but is a feature not available in Python 2.5, so we suggest not getting accustomed to using it when targetting the OLPC XO.
