@@ -11,9 +11,10 @@ PEP8 and The Zen of Python
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 One of the most important aspects of developing in Python is the Python community. Code is meant to be read, used, and worked on by many people. As building most games is going to end up being a group project, code style is of particular importance. PEP8_ provides a style guide for Python code. It is a lengthy document, and not everything it has to say will be immediately applicable, but come back to it as you learn and grow as a developer. Some guidelines you may choose to ignore in your own code with no reprecussions, but some guidelines are absolutely essential. Some guidelines that are essential to follow for this course:
-  * Use 4 spaces per indentation level. (Good editors will allow you to set soft-tabs to four spaces. Figure this out before you continue. When working with a team, indentation style is non-negotiable.)
-  * `Rules on blank lines <http://www.python.org/dev/peps/pep-0008/#blank-lines>`_
-  * `Naming conventions <http://www.python.org/dev/peps/pep-0008/#prescriptive-naming-conventions>`_ are particularly important.
+
+* Use 4 spaces per indentation level. (Good editors will allow you to set soft-tabs to four spaces. Figure this out before you continue. When working with a team, indentation style is non-negotiable.)
+* `Rules on blank lines <http://www.python.org/dev/peps/pep-0008/#blank-lines>`_
+* `Naming conventions <http://www.python.org/dev/peps/pep-0008/#prescriptive-naming-conventions>`_ are particularly important.
 
 The Zen of Python is a list of guiding principles behind the design of Python, and a good list of guiding principles for any project written in python. The most common way to find it is a little easter egg. In a python interpreter
 
@@ -676,27 +677,34 @@ This `article <http://effbot.org/zone/import-confusion.htm>`_ does a good job de
 Advanced Concepts
 -----------------
 
+There are a large number of advanced concepts in python. Most of them will not be necessary to achieve success in this course, so feel free to skip the rest of this chapter.
+
 New- and Old- Style Classes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+For more information, consult this `page <http://stackoverflow.com/a/54873/1718155>`_ .
 
 Decorators
 ;;;;;;;;;;
 
-Important Decorators
-;;;;;;;;;;;;;;;;;;;;
+Decorators are a tricky but useful feature that require you to really know how functions exist in Python. For a quick introduction, consult this `12-step guide <http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/>`_ .
 
-@property, @classmethod, @lru_cache, @staticmethod
+Sadly, Python 2.5 does not support decorators.
 
 Metaclasses
 ;;;;;;;;;;;
 
+Metaclasses are a complicated subject that get at the heart of how classes work in python. For a lengthy explanation, consult this `page <http://stackoverflow.com/a/6581949/1718155>`_ .
+
 Context Managers
 ;;;;;;;;;;;;;;;;
 
-This could be considered basic as well
+Context Managers are not natively built into Python 2.5, but can be enabled with the use of a future import. To read more about them, consult this `page <http://www.itmaybeahack.com/book/python-2.6/html/p03/p03c07_contexts.html>`_ .
 
 Descriptors
 ;;;;;;;;;;;
+
+Spyral uses Descriptors extensively in order to make magic properties that behave more like functions. If you're curious how setting the ``x`` property of a ``spyral.Sprite`` affects its ``pos`` property, then read the following documentation on `Descriptors <http://docs.python.org/2/howto/descriptor.html>`_ .
 
 
 Additional Reading
@@ -710,26 +718,44 @@ Important Modules
 itertools
 ;;;;;;;;;
 
+Itertools provides many useful functions for manipulating iterables (e.g., lists, sets). Often, if you find yourself writing a complicated list handling routine, there will be an existing solution in `this module <http://docs.python.org/release/2.5/lib/module-itertools.html>`_ . 
+
 random
 ;;;;;;
+
+Most interesting games will require extensive knowledge of how randomness works in computers. To read more about how this is done in Python, refer to this `page <http://docs.python.org/2/library/random.html>`_ .
 
 operator
 ;;;;;;;;
 
+In a functional programming course, you often pass common operators as arguments (e.g., ``+`` in ``(foldr + 0 my-list)``). This can be done in Python by using the `operator <http://docs.python.org/2/library/operator.html>`_ module. Every operation in Python maps to a function in this class.
+
 logging
 ;;;;;;;
+
+Python has some built-in utilities for `logging <http://docs.python.org/2.6/library/logging.html>`_ , although eventually the Dev launcher will provide these mechanisms.
 
 collections
 ;;;;;;;;;;;
 
+Although the built-in Python datatypes (``set``, ``list``, ``tuple``, etc.) are very useful, sometimes you need something else. Read over the extra `collections <http://docs.python.org/2/library/collections.html>`_ available, and pay particular attention to ``defaultdict`` and ``Counter``.
+
 os and sys
 ;;;;;;;;;;
+
+Python uses two modules for connecting to your `OS <http://docs.python.org/2/library/os.html>`_ and `interpreter <http://docs.python.org/2/library/sys.html>`_ . You'll wish you had these modules when you take Operating Systems and have to write your own shell.
 
 pdb
 ;;;
 
-json and pickle
-;;;;;;;;;;;;;;;
+The `Python Debugger <http://docs.python.org/2/library/pdb.html>`_ is a useful tool for post-mortem analysis of why your program crashed. Eventually, this will be integrated into the Dev Launcher.
+
+json
+;;;;
+
+JSON is a brillantly simple format for exchanging data between applications, and it has functionally replaced XML for most of the web's communication. XML is almost never the answer when you need to transmit or store data; JSON almost always is. Although later version of python bundle a module for manipulating JSON, you will need `SimpleJson <https://pypi.python.org/pypi/simplejson/>`_ (which uses the same interface) for the XO laptop. 
+
+JSON is a better alternative for saving and restoring state than Pickling, which can lead to security vulnerabilities. This `tutorial <http://pymotw.com/2/json/>`_ on the Python JSON library covers some of the differences, and is a useful guide for someone starting with the library.
 
 Additional Reading
 ;;;;;;;;;;;;;;;;;;
@@ -738,8 +764,16 @@ http://www.doughellmann.com/PyMOTW/py-modindex.html
 
 Third-Party Modules
 -------------------
-Not sure if this is necessary here? Should mention things like requests
 
+Requests
+;;;;;;;;
+
+`Requests <http://requests.readthedocs.org/en/latest/>`_ is often considered one of the most beautiful Python libraries, and makes accessing web-based resources trivial. If your game requires connection to the internet (which is not recommended given the spotty internet with XO laptops), this is a requirement.
+
+BeautifulSoup
+;;;;;;;;;;;;;
+
+If you need to get data out of an HTML page, the `BeautifulSoup <http://www.crummy.com/software/BeautifulSoup/>` library is your friend.
 
 Additional Reading
 ------------------
