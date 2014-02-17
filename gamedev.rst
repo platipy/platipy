@@ -12,3 +12,5 @@ Art and Design
 `2D Game Art For Programmers <http://gamasutra.com/blogs/ChrisHildenbrand/20111015/8669/2D_Game_Art_For_Programmers__Part_1_updated.php>`_
     A great series on creating 2D artwork for games. If you enjoy the first post, be sure to read the blog, it contains many more articles than are on Gamasutra.
 
+`OpenGameArt <http://opengameart.org/>`_
+    A fantastic, on-going work to collect open source, public domain 
