@@ -2,6 +2,7 @@ import sys, os
 
 class MockObject(): pass
 greenlet = MockObject()
+sys.modules['greenlet'] = greenlet
 
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
