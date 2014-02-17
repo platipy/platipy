@@ -773,7 +773,7 @@ Requests
 BeautifulSoup
 ;;;;;;;;;;;;;
 
-If you need to get data out of an HTML page, the `BeautifulSoup <http://www.crummy.com/software/BeautifulSoup/>` library is your friend.
+If you need to get data out of an HTML page, the `BeautifulSoup <http://www.crummy.com/software/BeautifulSoup/>`_ library is your friend.
 
 Additional Reading
 ------------------
