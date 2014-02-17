@@ -20,7 +20,6 @@ Building Games
    intro
    pythonista
    getting_started
-   targetting
    pong
    
 Spyral Documentation
