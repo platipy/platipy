@@ -30,10 +30,10 @@ activity/        This directory contains some metadata required for the XO. It c
 dist/            When you are building with *setup.py*, the output will go in here. Any files in this directory will be ignored when building.
 game/            This is the directory where all your game assets will go. All the code, artwork, fonts, etc. should be placed in here. This is to facilitate updating the launcher in the future and keeping the directory structure clean.
 libraries/       This directory contains any pure python libraries that you wish to distribute with your game.
-locale/         This is a build output directory, like *dist*, except for built translations. You should never be placing things in here by hand
-po/             This directory contains source files for translations. You can read more about this in the section on Translating
-profiles/       This directory will contain the output from the performance profiler built into the development launcher.
-skel/           This directory contains support files for init.py. You can safely ignore it.
+locale/          This is a build output directory, like *dist*, except for built translations. You should never be placing things in here by hand
+po/              This directory contains source files for translations. You can read more about this in the section on Translating
+profiles/        This directory will contain the output from the performance profiler built into the development launcher.
+skel/            This directory contains support files for init.py. You can safely ignore it.
 ================ ===========
 
 Running the Example
