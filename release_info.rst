@@ -1,8 +1,8 @@
 Latest Versions
 ===============
 
-The latest version of Example.activity is v0.2.
-The latest version of spyral is v0.2.
+The latest version of Example.activity is v0.3.
+The latest version of spyral is v0.9.
 
 .. _downloads:
 
@@ -11,13 +11,15 @@ Downloads
 
 To update spyral to a newer version than the one included with your launcher, remove libraries/spyral and replace with the downloaded version.
 
-* `Download spyral v0.2 <https://github.com/rdeaton/spyral/zipball/v0.2>`_
-* :download:`Download Example.activity v0.2 <files/releases/Example.activity_v0.2.tar.gz>` (Includes spyral v0.2)
+* `Download spyral v0.9 <https://github.com/platipy/spyral/archive/master.zip>`_
+* `Download Example.activity v0.3 <https://github.com/platipy/Example.activity/archive/master.zip>`_
 
 Old Versions
 ~~~~~~~~~~~~
+* `Download spyral v0.2 <https://github.com/rdeaton/spyral/zipball/v0.2>`_
 * `Download spyral v0.1.1 <https://github.com/rdeaton/spyral/zipball/v0.1.1>`_
 * `Download spyral v0.1 <https://github.com/rdeaton/spyral/zipball/v0.1>`_
+* :download:`Download Example.activity v0.2 <files/releases/Example.activity_v0.2.tar.gz>` (Includes spyral v0.2)
 * :download:`Download Example.activity v0.1 <files/releases/Example.activity_v0.1.tar.gz>` (Includes spyral v0.1)
 
 
