@@ -32,7 +32,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Platipy'
-copyright = u'2012, Robert Deaton, <a href="http://www.acbart.com">Austin Bart</a>'
+copyright = u'2012, Robert Deaton, Austin Bart'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

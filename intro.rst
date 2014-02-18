@@ -1,16 +1,14 @@
 Introduction and Target Audience
 ================================
 
-This document is intended to be a collection of the wisdom learned about developing games for the `OLPC XO <http://one.laptop.org/>`_, with a special focus on the goals of the students taking CISC374 at the `University of Delaware <http://udel.edu>`_. We won't talk too much about developing individual games, as that varies widely from year to year and team to team, but instead we'll focus on the differences and particular challenges that are faced when placing these games on the OLPC, and some ways to overcome those challenges. Each section will conclude with links for additional reading that will often include more depth and breadth than will be presented here.
+This website is a collection of wisdom learned about developing games for the `OLPC XO <http://one.laptop.org/>`_, with a special focus on the goals of the students taking CISC-374 at the `University of Delaware <http://udel.edu>`_. We won't talk too much about developing individual games, as that varies widely from year to year and team to team, but instead we'll focus on the differences and particular challenges that are faced when placing these games on the OLPC, and some ways to overcome those challenges. Each section will conclude with links for additional reading that will often include more depth and breadth than will be presented here. 
 
-While we will focus mostly on the needs of the course at the University of Delaware, most of the material is generally applicable for developing pygame-based activities for the OLPC XO.
+While we will focus mostly on the needs of the course at the University of Delaware, most of the material is generally applicable for developing non-PyGTK activities for the OLPC XO. We will begin with a quick introduction to the One-Laptop-Per-Child project and the XO laptop, its flagship product.
 
 The OLPC XO
 -----------
 
-The XO was chosen as a development environment for a number of reasons. Probably the most important of these reasons is that the middle school with which CISC374 coordinates received a donation that allows them to assign one XO to every student at the school. There is also a large educational development community around the XO and the OLPC foundation, so the hope is that the results of this course can be released to the greater community. 
-
-What follows is a quick introduction to the OLPC for those unfamiliar with it.
+The XO was chosen as a development environment for a number of reasons. Probably the most important reason is that the middle school with which CISC374 coordinates received a donation that allows them to assign one XO to every student at the school. There is also a large educational development community around the XO and the OLPC foundation, so the hope is that the results of this course can be released to the greater community.
 
 Sugar and Activities
 ~~~~~~~~~~~~~~~~~~~~
