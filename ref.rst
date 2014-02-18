@@ -15,15 +15,9 @@ Appendices
 Anchors
 -------
 
-* topleft
-* midtop
-* topright
-* midleft
-* center
-* midright
-* bottomleft
-* midbottom
-* bottomright
+There are several anchor points available, each given by a different string. The image below shows their locations on an image.
+
+.. image:: images/anchors.png
 
 .. _ref.keys:
 
@@ -40,13 +34,15 @@ Keyboard Modifiers
 Layering
 --------
 
-Easings
-Animations
 Rects
-Vec2Ds
-Widgets
+-----
+
+:class:`Rects <spyral.Rect>` can be accessed in a number of ways. The diagram below demonstrates the possibel properties.
+
+.. image:: images/rect.png
 
 Styleable properties
+--------------------
 
 .. _ref.image_formats:
 

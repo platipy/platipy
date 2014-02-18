@@ -80,20 +80,18 @@ Pygame vs PyGTK+
 
 With Python chosen, we have two choices for a user interface that will work with Sugar: pygame and PyGTK+. PyGTK+ is a set of bindings for GTK+, a common GUI toolkit for Desktop applications. While some games may be written easily within the confines of PyGTK+, many of the game ideas which have been proposed would not, requiring much custom development of widgets and internal knowledge of GTK+.
 
-Pygame, however, is a library made specificially for game development. It provides simple and direct ways of drawing and managing 2D images on the screen, making it a great choice for making simple games. It does, however, also have a few downsides. Most notably, hardware support with pygame is notoriously lacking, and further limited by the XO's lack of OpenGL drivers on some models. Additionally, compared to PyGTK+, pygame is a second-class citizen in OLPC development, requiring a number of hacks and workarounds. To remedy this situation, a custom library built on top of pygame, called spyral, has been developed for this course.
-
-For almost everyone, pygame is going to be the obvious choice, and so it will be the focus of the rest of this guide. If you choose to work with PyGTK, there are some resources available.
+Pygame, however, is a library made specificially for game development. It provides simple and direct ways of drawing and managing 2D images on the screen, making it a great choice for making simple games. It does, however, also have a few downsides. Most notably, hardware support with pygame is notoriously lacking, and further limited by the XO's lack of OpenGL drivers on some models. Additionally, compared to PyGTK+, pygame is a second-class citizen in OLPC development, requiring a number of hacks and workarounds. To remedy this situation, a custom library built on top of pygame, called Spyral, has been developed for this course.
 
 Spyral
 ~~~~~~
 
-In addition to Python and pygame, the recommendation for this course and the rest of this tutorial will cover the use of spyral. Spyral is a library built on top of pygame to provide a number of features which are useful for this course. Most importantly, spyral helps provide the following:
+In addition to Python and Pygame, the recommendation for this course is Spyral, a library built on top of pygame to provide a number of features which are useful for rapid and efficient game development. Most importantly, spyral helps provide the following:
 
-* Some built-in core concepts of game design. Pygame is really just a wrapper for doing 2D drawing, with a few nice features like sound and input support, but doesn't provide much in terms of higher level game design concepts. Spyral provides a scene system, improved game clocks, a camera system, an events system, and more.
+* Some built-in core concepts of game design. Pygame is really just a wrapper for doing 2D drawing, with a few nice features like sound and input support, but doesn't provide much in terms of higher level game design concepts. Spyral provides a scene system, improved game clocks, an events system, and much more.
 
 * An optimized method of drawing. Because pygame on the XO is not hardware accelerated, pygame's software rendering is the slowest part of every game. Spyral provides a no-hassle method of doing dirty rendering which can increase performance significantly for sprite-based 2D games
 
-Spyral is a complete wrapper on-top of pygame, meaning that the usage of pygame should be completely hidden from the user. For advanced users, pygame is in full use behind the scenes, and with clever reading of the spyral source code, you can use it in your games, but we feel that spyral should be sufficient for most users in this course.
+Spyral is a complete wrapper on-top of pygame, meaning that the usage of pygame should be completely hidden from the user. For advanced users, pygame is in full use behind the scenes, and with clever reading of the spyral source code, you can use it in your games, but we feel that spyral should be sufficient for most users in this course. If you find yourself in need of a feature, please contact the developers by raising a new issue on the `Spyral Github <https://github.com/platipy/spyral/issues?state=open>`_ .
 
 Additional Reading
 ------------------
@@ -102,4 +100,4 @@ Additional Reading
 
 * For some additional motivation for Python and PyGTK+ and Pygame, the `FLOSS Manuals guide to "Make your own sugar activities" <http://www.flossmanuals.net/make-your-own-sugar-activities/>`_ is a good read.
 
-* For a more in-depth look at the motivation behind spyral, see *TODO*.
+* For a more in-depth look at the motivation behind spyral, see our :ref:`Contributor Application <contributor_application>`.

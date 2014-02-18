@@ -1,3 +1,5 @@
+.. _contributor_application:
+
 OLPC Contributor Application
 ============================
 
