@@ -65,6 +65,7 @@ If you have problems connecting, try some of these fixes.
   * Keep the "ears" (the little swiveling bars on the XO that cover the USB ports) upwards. That's where the wifi antennae are.
   * Try removing your network history. Right click the XO symbol on the Home View, choose "Control Panel", and go to "Network". There should be a button that promises to "Discard network history". Don't worry if clicking it doesn't appear to do anything. It's a silent fix. Just try connecting again.
   * Smack your XO until you feel better.
+  * A recent research study discovered that when 10+ XO laptops are put together, the mesh network on even a single XO can completely halt the regular internet connection. Disabling the mesh on all the laptops (which can be done with a startup script) should restore functionality. Refer to the `following discussion <https://groups.google.com/forum/#!topic/unleashkids/1vkhJ2uS-R0>`_ for more information.
   * Try the stuff on `this page <http://wiki.laptop.org/go/Wifi_Connectivity#Special_Considerations>`_.
 
 Development Options
