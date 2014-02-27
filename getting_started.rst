@@ -4,11 +4,36 @@ Getting Started
 Required Software
 -----------------
 
-XO laptops do not run the most current version of most of their software. If you want to be a good XO developer, you'll want to develop using the following versions.
+.. warning:: XO laptops do not run the most current version of most of their software. If you want to be the best XO developer possible, you'll want to use the earlier versions. If you cannot get older versions installed, Python 2.7 and the latest version of pygame are acceptable, but make sure you are testing often on the XO. There are also programs that can search your source code and make sure it is `2.5 compliant <https://github.com/ghewgill/pyqver>`_ .
+   
+Spyral has several dependencies. Moreover, the installation process is very different on Mac and Windows. Please follow the directions that are appropriate for your system.
+
+Mac
+***
+
+1. Install Python
+2. Install setuptools
+3. Install pip
+4. Install greenlets
+5. Install pygame
+6. Download Pong Example
+
+Windows
+*******
+
+Step # | Name                | Description                                         |
+1.     | Python              | The Python interpreter                              |
+2.     | Setuptools          | A tool for installing python software               |
+3.     | Pip                 | A better tool for installing (requires setuptools)  |
+4.     | Greenlets           | A tool for adding parallel processing to python     |
+5.     | Pygame              | The game dev library that Spyral builds on          |
+7.     | Spyral Pong example | A simple game of Pong, with spyral included         |
+
+   
   * Python `2.5 <http://www.python.org/getit/releases/2.5.4/>`_: You might be able to get away with using 2.6 or even 2.7, but absolutely do not bother using 3.*. 
   * `Pygame <http://pygame.org/download.shtml>`_: Version 1.8.1 is the best to work with, but any version should work. Users for some operating systems may have to use the newest versions.
 
-If you cannot get older versions installed, Python 2.7 and the latest version of pygame are acceptable, but make sure you are testing often on the XO.
+
 
 Setting up the Launcher
 -----------------------
