@@ -28,29 +28,13 @@ There are several steps to getting python and spyral fully running on your PC.
 #. **Python**: Python is the name of the language and the interpeter. Use `2.7 <http://python.org/ftp/python/2.7.6/python-2.7.6.msi>`_ since 2.5 is no longer easily available on Windows.
 #. **Greenlets**: Greenlets is a powerful module for adding multiprocessing. Download version 0.4.2, for windows 32-bit 2.7 Python, from `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#greenlet>`_ .
 #. **Pygame**: Pygame is the game development library for Python that is installed on the XOs. Download the latest version `here <http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi>`_ .
-#. **Add Python to your Path**: To be able to directly run python from the command line, you must add the path to Python to your System's Path. This `Stack Overflow <http://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-7>`_ gives general directions, but you might need to google search for directions that work for your version. Make sure you add both the Python folder itself and the Scripts subfolder folder!
-#. **Download Pong Example**: 
-
-Bonus recommendations::
-
-#. Use PowerShell instead of the default Windows Command Line. It has a lot of unix features like ``ls`` and should already be installed on your system.
 #. **SetupTools**: This is a python module for quickly installing new python modules. Download version 2.2, for windows 32-bit 2.7 Python from `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools>`_ .
 #. **Pip**: SetupTools is a requirement for an even better installer named Pip. Download version 1.5.4, for windows 32-bit 2.7 Python, from `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip>`_ .
+#. **Add Python to your Path**: To be able to directly run python from the command line, you must add the path to Python to your System's Path. This `Stack Overflow <http://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-7>`_ gives general directions, but you might need to google search for directions that work for your version. Make sure you add both the Python folder itself and the Scripts subfolder folder!
+#. **Parsley**: This is a module that Spyral uses to handle Spyral Style Files. Use the following on the command line: ``pip install parsley``
+#. **Download Pong Example**: We've created a simple game of Pong to demonstrate not only how to use spyral, but how to properly bundle games for the XO. Download our Pong example (with Spyral included).
 
-Step #  Name                  Description                                          
-------- --------------------- -----------------------------------------------------
-1.      Python                                               
-2.                  A tool for installing python software                
-3.      Pip                   A better tool for installing (requires setuptools)   
-4.                   A tool for adding parallel processing to python      
-5.      Pygame                The game dev library that Spyral builds on           
-7.      Spyral Pong example   A simple game of Pong, with spyral included          
-------- --------------------- ----------------------------------------------------- 
-
-   
-  * Python `2.5 <http://www.python.org/getit/releases/2.5.4/>`_: You might be able to get away with using 2.6 or even 2.7, but absolutely do not bother using 3.*. 
-  * `Pygame <http://pygame.org/download.shtml>`_: Version 1.8.1 is the best to work with, but any version should work. Users for some operating systems may have to use the newest versions.
-
+.. note:: Use PowerShell instead of the default Windows Command Line. It has a lot of unix features like ``ls`` and should already be installed on your system.
 
 
 Setting up the Launcher
