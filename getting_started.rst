@@ -16,7 +16,7 @@ Mac
 #. Install pip
 #. Install greenlets
 #. Install pygame
-#. :download:`Download Pong <files/releases/Pong-ea1.0-sp0.9.1.zip>`_
+#. :download:`Download Pong <files/Pong-ea1.0-sp0.9.1.zip>`_
 
 Unix
 ****
@@ -26,7 +26,7 @@ Unix
 #. sudo apt-get install python-pygame
 #. sudo pip install greenlet
 #. sudo pip install parsley
-#. :download:`Download Pong <files/releases/Pong-ea1.0-sp0.9.1.zip>`_
+#. :download:`Download Pong <files/Pong-ea1.0-sp0.9.1.zip>`_
 
 Windows
 *******
