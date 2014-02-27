@@ -32,7 +32,7 @@ There are several steps to getting python and spyral fully running on your PC.
 #. **Pip**: SetupTools is a requirement for an even better installer named Pip. Download version 1.5.4, for windows 32-bit 2.7 Python, from `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip>`_ .
 #. **Add Python to your Path**: To be able to directly run python from the command line, you must add the path to Python to your System's Path. This `Stack Overflow <http://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-7>`_ gives general directions, but you might need to google search for directions that work for your version. Make sure you add both the Python folder itself and the Scripts subfolder folder!
 #. **Parsley**: This is a module that Spyral uses to handle Spyral Style Files. Use the following on the command line: ``pip install parsley``
-#. **Download Pong Example**: We've created a simple game of Pong to demonstrate not only how to use spyral, but how to properly bundle games for the XO. Download our Pong example (with Spyral included).
+#. **Download Pong Example**: We've created a simple game of Pong to demonstrate not only how to use spyral, but how to properly bundle games for the XO. Download our `Pong example (with Spyral included) <https://github.com/platipy/platipy/raw/master/files/Pong-ea1.0-sp0.9.zip>`_ .
 
 .. note:: Use PowerShell instead of the default Windows Command Line. It has a lot of unix features like ``ls`` and should already be installed on your system.
 
