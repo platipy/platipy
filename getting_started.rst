@@ -18,6 +18,16 @@ Mac
 5. Install pygame
 6. Download Pong Example
 
+Unix
+****
+
+#. sudo apt-get install python-setuptools
+#. sudo apt-get install python-pip
+#. sudo apt-get install python-pygame
+#. sudo pip install greenlet
+#. sudo pip install parsley
+#. Download our `Pong example (with Spyral included) <https://github.com/platipy/platipy/raw/master/files/Pong-ea1.0-sp0.9.zip>`_ .
+
 Windows
 *******
 
