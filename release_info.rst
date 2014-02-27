@@ -11,8 +11,8 @@ Downloads
 
 To update spyral to a newer version than the one included with your launcher, remove libraries/spyral and replace with the downloaded version.
 
-* `Download spyral v0.9 <https://github.com/platipy/spyral/archive/master.zip>`_
-* `Download Example.activity v0.3 <https://github.com/platipy/Example.activity/archive/master.zip>`_
+* :download:`Download Pong.v2 <files/releases/Pong-ea1.0-sp0.9.1.zip>`_
+* :download:`Download Spyral.v0.9.1 <files/releases/spyral-0.9.1.zip>`_
 
 Old Versions
 ~~~~~~~~~~~~
