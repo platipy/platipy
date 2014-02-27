@@ -21,16 +21,16 @@ Mac
 Windows
 *******
 
-|-------|---------------------|-----------------------------------------------------|
++-------+---------------------+-----------------------------------------------------+
 |Step # | Name                | Description                                         |
-|-------|---------------------|-----------------------------------------------------|
++-------+---------------------+-----------------------------------------------------+
 |1.     | Python              | The Python interpreter                              |
 |2.     | Setuptools          | A tool for installing python software               |
 |3.     | Pip                 | A better tool for installing (requires setuptools)  |
 |4.     | Greenlets           | A tool for adding parallel processing to python     |
 |5.     | Pygame              | The game dev library that Spyral builds on          |
 |7.     | Spyral Pong example | A simple game of Pong, with spyral included         |
-|-------|---------------------|-----------------------------------------------------|
++-------+---------------------+-----------------------------------------------------+
 
    
   * Python `2.5 <http://www.python.org/getit/releases/2.5.4/>`_: You might be able to get away with using 2.6 or even 2.7, but absolutely do not bother using 3.*. 
