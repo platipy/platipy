@@ -6,7 +6,7 @@ SIZE = (WIDTH, HEIGHT)
 
 class Paddle(spyral.Sprite):
     def __init__(self, scene, side):
-        super(Sprite, self).__init__(scene)
+        super(Paddle, self).__init__(scene)
         
         self.image = spyral.Image(size=(20, 300)).fill((255, 255, 255))
         
@@ -22,8 +22,7 @@ class Pong(spyral.Scene):
     def __init__(self):
         super(Pong, self).__init__(SIZE)
         
-        self.background = spyral.Image(size=SIZE)
-        self.background.fill( (0, 0, 0) )
+        self.background = spyral.Image(size=SIZE).fill( (0, 0, 0) )
 
         self.left_paddle = Paddle(self, 'left')
         self.right_paddle = Paddle(self, 'right')

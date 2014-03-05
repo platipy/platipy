@@ -8,7 +8,7 @@ SIZE = (WIDTH, HEIGHT)
 
 class Ball(spyral.Sprite):
     def __init__(self, scene):
-        super(Ball, self).__init__()
+        super(Ball, self).__init__(scene)
         
         self.image = spyral.Image(size=(20, 20))
         self.image.draw_circle((255, 255, 255), (10, 10), 10)
@@ -17,9 +17,9 @@ class Ball(spyral.Sprite):
         spyral.event.register('director.update', self.update)
         self.reset()
                 
-    def update(self, dt):
-        self.x += dt * self.vel_x
-        self.y += dt * self.vel_y
+    def update(self, delta):
+        self.x += delta * self.vel_x
+        self.y += delta * self.vel_y
 
     def reset(self):
         # We'll start by picking a random angle for the ball to move
@@ -42,7 +42,7 @@ class Ball(spyral.Sprite):
 
 class Paddle(spyral.Sprite):
     def __init__(self, scene, side):
-        super(Sprite, self).__init__(scene)
+        super(Paddle, self).__init__(scene)
         
         self.image = spyral.Image(size=(20, 300)).fill((255, 255, 255))
         
@@ -58,8 +58,7 @@ class Pong(spyral.Scene):
     def __init__(self):
         super(Pong, self).__init__(SIZE)
         
-        self.background = spyral.Image(size=SIZE)
-        self.background.fill( (0, 0, 0) )
+        self.background = spyral.Image(size=SIZE).fill( (0, 0, 0) )
 
         self.left_paddle = Paddle(self, 'left')
         self.right_paddle = Paddle(self, 'right')
