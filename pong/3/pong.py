@@ -8,5 +8,4 @@ class Pong(spyral.Scene):
     def __init__(self):
         super(Pong, self).__init__(SIZE)
         
-        self.background = spyral.Image(size=SIZE)
-        self.background.fill((0, 0, 0))
+        self.background = spyral.Image(size=SIZE).fill((0, 0, 0))
