@@ -40,6 +40,7 @@ Further References
    :maxdepth: 2
    
    gamedev
+   educgamedesign
    
 The Platipy Project
 -------------------
@@ -48,6 +49,7 @@ The Platipy Project
     
     contributor_application
     gallery
+    openproblems
 
 Release Information
 -------------------
