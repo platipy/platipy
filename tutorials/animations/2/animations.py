@@ -13,7 +13,7 @@ class Block(spyral.Sprite):
         self.anchor = 'center'
         self.y = HEIGHT / 2
         
-        animation = Animation('x', easing.Linear(0, WIDTH), duration = 1.5)
+        animation = Animation('x', easing.Sine(WIDTH/4), duration = 1.5, shift=WIDTH/2)
         self.animate(animation)
 
 class Game(spyral.Scene):
@@ -22,5 +22,13 @@ class Game(spyral.Scene):
         self.background = spyral.Image(size=SIZE).fill((0,0,0))
         
         spyral.event.register("system.quit", sys.exit)
+        spyral.event.register("Block.x.animation.start", self.hello)
+        spyral.event.register("Block.x.animation.end", self.goodbye)
         
         self.block = Block(self)
+    
+    def hello(self, sprite):
+        print "Hello", sprite
+
+    def goodbye(self, sprite):
+        print "Goodbye", sprite

@@ -53,10 +53,12 @@ Director
     :type scene: :class:`Scene <spyral.Scene>`
     :triggered by: Whenever a scene is slips off the stack, e.g., a new scene is pushed on top, a scene is popped
 
+.. _ref.events.animations:
+    
 Animations
 """"""""""
 
-.. function:: "sprites.<name>.animation.start" : Event(animation, sprite)
+.. function:: "<sprite>.<attribute>.animation.start" : Event(animation, sprite)
     
     :param animation: The animation that is starting
     :type animation: :class:`Animation <spyral.Animation>`
@@ -64,7 +66,7 @@ Animations
     :type sprite: :class:`Sprite <spyral.Sprite>`
     :triggered by: A new animation starting on a sprite.
 
-.. function:: "sprites.<name>.animation.end" : Event(animation, sprite)
+.. function:: "<sprite>.<attribute>.animation.end" : Event(animation, sprite)
     
     :param animation: The animation that is starting
     :type animation: :class:`Animation <spyral.Animation>`
