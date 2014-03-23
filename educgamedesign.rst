@@ -6,6 +6,8 @@ Educational Game Design
 Research
 --------
 
+Math Video Game: ARCS and Diagnostics :cite:`2014:huang`
+
 Gender in video games: Boy vs. Girls
 
 TPACK: Technological, Content, and Pedagogical Knowledge
@@ -43,3 +45,5 @@ Game Development tips (that one Master's thesis)
 Connected Learning
 
 How People Learn
+
+.. bibliography:: research/refs.bib
