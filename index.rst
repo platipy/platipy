@@ -32,7 +32,7 @@ Spyral Documentation
    spyral_docs
    ref
    cheats
-   snake
+   animations
    
 Further References
 ------------------
