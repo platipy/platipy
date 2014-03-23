@@ -1,6 +1,6 @@
-************
-Cheat Sheets
-************
+***********************
+Spyral API Cheat Sheets
+***********************
 
 The following are convenient listings of the attributes and methods of some of
 the more common classes and modules.

@@ -1,6 +1,6 @@
-**********
-Appendices
-**********
+*********************
+Spyral API Appendices
+*********************
 
 .. topic:: Appendices
 
