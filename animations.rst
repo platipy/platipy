@@ -50,7 +50,7 @@ The :func:`QuadraticOut <spyral.easing.QuadraticOut>` starts fast and then slows
 
     animation = Animation('y', easing.QuadraticIn(0, HEIGHT), duration = 1.5)
 
-Not all of the easings have an explicit ``start`` and ``end`` though; consider the :func:`Sine <spyral.easing.Sine>` easing, which takes in an amplitude instead (moving the Sprite back and forth 16 pixels). Notice that we use a new parameter of the ``Animation`` named ``shift``, that sets the initial value of the attribute.
+Not all of the easings have an explicit ``start`` and ``end`` though; consider the :func:`Sine <spyral.easing.Sine>` easing, which takes in an amplitude instead. First the attribute will oscillate to the positive ``amplitude``, and then to the negative ``amplitude``. Notice that we also use a new parameter of the ``Animation`` named ``shift``, that sets the initial value of the attribute.
 
 .. code-block:: python
 
@@ -86,7 +86,7 @@ And for images:
     images = [spyral.Image(filename=f) for f in filenames]
     animation = Animation('visible', easing.Iterate(images), duration = 1.5)
 
-You can even iterate over your own custom variable. If you had a happiness level for your sprite, you might make it fluctuate by:
+You can even iterate over your own custom variable. If you had a happiness level for your sprite, you might make it fluctuate between -10 and 10 by:
 
 .. code-block:: python
 
@@ -205,3 +205,5 @@ Animations cover a wide range of use cases, from movement to image changes, and 
 But don't let the great power go to your head: some actions will always be slow on the XO laptops.
 For instance, animating over the ``angle`` attribute.
 As you use more animations, test your creation on the XO laptop directly to see how it performs.
+
+If you want to see all the easings and animations in action, there is an `example <https://github.com/platipy/spyral/blob/master/examples/animations.py>`_ in the Spyral github.
