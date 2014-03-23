@@ -20,8 +20,6 @@ Building Games
    :maxdepth: 2
    
    intro
-   pythonista
-   getting_started
    tutorials
    
 Spyral Documentation
