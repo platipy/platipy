@@ -12,7 +12,7 @@ Downloads
 To update spyral to a newer version than the one included with your launcher, remove libraries/spyral and replace with the downloaded version.
 
 * :download:`Download Pong.v2 <files/Pong-ea1.0-sp0.9.1.zip>` (includes spyral)
-* :download:`Download Spyral.v0.9.1 <files/spyral-0.9.1.zip>`
+* :download:`Download Spyral.v0.9.6 <files/spyral-0.9.6.zip>`
 
 Old Versions
 ~~~~~~~~~~~~
