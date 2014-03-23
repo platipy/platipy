@@ -22,7 +22,7 @@ Building Games
    intro
    pythonista
    getting_started
-   pong
+   tutorials
    
 Spyral Documentation
 --------------------
@@ -32,7 +32,6 @@ Spyral Documentation
    spyral_docs
    ref
    cheats
-   animations
    
 Further References
 ------------------
