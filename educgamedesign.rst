@@ -11,50 +11,40 @@ Research
 
     research/huang2014
     research/kinzie2008
-    
-References
-----------
 
-.. bibliography:: refs.bib
+Queued Research Papers
+----------------------
 
-Math Video Game: ARCS and Diagnostics
+#. Off-the-shelf video games in the classroom
 
-Gender in video games: Boy vs. Girls
+#. Exogenous & Endogenous Games
 
-TPACK: Technological, Content, and Pedagogical Knowledge
+#. Acquisition vs. Participation Metaphors for Knowledge
 
-Constructivism
+#. Game Development Design Principles (Gelderblom's Masters thesis)
 
-Feedback
+#. TPACK: Technological, Content, and Pedagogical Knowledge
 
-Situated Learning
+#. What is Constructivism?
 
-Motivation & Engagement: MUSIC model
-Motivation & Engagement:
+#. What is Situated Learning?
 
-Off-the-shelf video games in the classroom
+#. Motivation & Engagement: MUSIC model
 
-Hanging Out, Messing Around, and Geeking Out
-    If you already believe games have educational potential, you might find this a little sedate.
+#. Hanging Out, Messing Around, and Geeking Out
 
-Next-generation Learning
+#. Next-generation Learning
 
-Exogenous & Endogenous Games
+#. Simulations vs. Games
 
-Simulations vs. Games
+#. Use - Modify - Create
 
-Use - Modify - Create
+#. Socio-Cognitive Learning
 
-Acquisition vs. Participation Metaphors for Knowledge
+#. Informal vs. Formal Learning Environments
 
-Socio-Cognitive Learning
+#. Connected Learning
 
-Informal vs. Formal Learning Environments
-
-Game Development tips (that one Master's thesis)
-
-Connected Learning
-
-How People Learn
+#. How People Learn
 
 .. bibliography:: research/refs.bib
