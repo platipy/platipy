@@ -10,6 +10,12 @@ Research
     :maxdepth: 2
 
     research/huang2014
+    research/kinzie2008
+    
+References
+----------
+
+.. bibliography:: refs.bib
 
 Math Video Game: ARCS and Diagnostics
 
@@ -50,3 +56,5 @@ Game Development tips (that one Master's thesis)
 Connected Learning
 
 How People Learn
+
+.. bibliography:: research/refs.bib
