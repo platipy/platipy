@@ -5,7 +5,7 @@ Digital Math Activity: Diagnostic Feedback
 
 **Summary**: 
 
-This is a study where they made a multiple-choice activity with diagnostic feedback, and then did an assessment. The `ARCS model <http://www.learning-theories.com/kellers-arcs-model-of-motivational-design.html>`_ , which is pretty helpful from a design point of view:
+This is a study where they made a multiple-choice activity with diagnostic feedback, and then did an assessment. They used the `ARCS model of motivational design <http://www.learning-theories.com/kellers-arcs-model-of-motivational-design.html>`_ , which is pretty helpful from a design point of view:
 
 * Gain the student's **attention**
 * Establish **relevance**

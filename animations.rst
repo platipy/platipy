@@ -1,7 +1,7 @@
 Animations Tutorial
 ===================
 
-Animations are a useful feature for making Sprites move and change over time.
+Animations are a useful feature for making Sprites move and change.
 They work by `interpolating <http://simple.wikipedia.org/wiki/Interpolation>`_ a property over time.
 When you interpolate, you mathematically calculate changes from an initial value to a final value. 
 As an example, here is a simple game where a sprite moves horizontally across the room using an Animation over the ``x`` attribute for 1.5 seconds.
@@ -70,15 +70,15 @@ Of course, some attributes are not numbers, they are :func:`Vec2Ds <spyral.Vec2D
 
 .. code-block:: python
 
-    animation = Animation('scale_x', easing.LinearTuple((0, 0) , (WIDTH, HEIGHT)), duration = 1.5)
+    animation = Animation('pos', easing.LinearTuple((0, 0) , (WIDTH, HEIGHT)), duration = 1.5)
     
-And some attributes take on discrete values: :func:`visible <spyral.Sprite.visible>` takes on either ``True`` or ``False``, and :func:`image <spyral.Sprite.image>` could take on one of a list of images. For these animations, you can use the :func:`Iterate <spyral.easing.Iterate>` easing.
+And some attributes take on discrete values: :func:`visible <spyral.Sprite.visible>` takes on either ``True`` or ``False``, and :func:`image <spyral.Sprite.image>` could take on one of a list of images. For these animations, you can use the :func:`Iterate <spyral.easing.Iterate>` easing. This can be used to achieve blinking:
 
 .. code-block:: python
     
-    animation = Animation('visible', easing.Iterate([True, False]), duration = 1.5)
+    animation = Animation('visible', easing.Iterate([True, False]), duration = .5)
     
-And for images:
+Or for running through a sequence of images:
 
 .. code-block:: python
     
@@ -111,6 +111,15 @@ Notice that the naming schema is:
 * <the name of the attribute>.
 * animation.
 * <either ``start`` or ``end``>
+
+A common pattern is to have a `Finite-State Machine <http://en.wikipedia.org/wiki/Finite-state_machine>`_ control the behavior of a Sprite in conjunction with animations. For instance, if you had a turret that charges up and then fires, you could control this behavior with an FSM.
+
+.. topic:: game/animating.py
+
+    .. literalinclude:: tutorials/animations/3/animations.py
+        :linenos:
+
+Notice how we test the ``sprite`` parameter to make sure that the given sprite is ``self`` - all Turrets fire the ``Turret.image.animation.end`` event, so we need to handle each individual turret separately. Also notice how we use a ``str`` to identify the state - this is good, pythonic practice.
 
 Combining Animations
 --------------------
@@ -175,7 +184,7 @@ Now we can combine what we know to make a cute game where the block chases the c
 
 .. topic:: game/animating.py
 
-    .. literalinclude:: tutorials/animations/3/animations.py
+    .. literalinclude:: tutorials/animations/4/animations.py
         :linenos:
         :emphasize-lines: 23-28
 
@@ -188,13 +197,13 @@ You can create your own Easings; more examples are given in the source code for 
 .. code-block:: python
     
     def MyEasing(start=0.0, finish=1.0):
-    """
-    Linearly increasing: f(x) = x
-    """
-        def my_easing(sprite, delta):
-            return (finish - start) * (delta) + start
-    return my_easing
-    animation = Animation('x', MyEasing(0, WIDTH), duration = 1.5)
+        """
+        Linearly increasing: f(x) = x
+        """
+            def my_easing(sprite, delta):
+                return (finish - start) * (delta) + start
+        return my_easing
+        animation = Animation('x', MyEasing(0, WIDTH), duration = 1.5)
 
 If you end up creating any Easings of your own (e.g., QuadraticInTuple), please share them!
 
@@ -204,6 +213,7 @@ Conclusion
 Animations cover a wide range of use cases, from movement to image changes, and beyond. 
 But don't let the great power go to your head: some actions will always be slow on the XO laptops.
 For instance, animating over the ``angle`` attribute.
+Basically, you want to avoid dynamic drawing as much as possible.
 As you use more animations, test your creation on the XO laptop directly to see how it performs.
 
 If you want to see all the easings and animations in action, there is an `example <https://github.com/platipy/spyral/blob/master/examples/animations.py>`_ in the Spyral github.
