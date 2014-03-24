@@ -1,7 +1,7 @@
 Educational Game Design
 =======================
 
-** Check back soon, these are coming soon :) **
+I do a lot of research on Educational Game Design, so I'll be posting interesting papers along with summaries. Please read and comment!
 
 Research
 --------
