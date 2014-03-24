@@ -1,7 +1,7 @@
 Digital Math Activity: Diagnostic Feedback
 ------------------------------------------
 
-**Title**: "Embedding diagnostic mechanisms in a digital game for learning mathematics" :cite:`2014:huang`
+**Title**: "Embedding diagnostic mechanisms in a digital game for learning mathematics" (Huang, 2014)
 
 **Summary**:  This is a study where they made a multiple-choice activity with diagnostic feedback, and then did an assessment. They used the `ARCS model of motivational design <http://www.learning-theories.com/kellers-arcs-model-of-motivational-design.html>`_ , which is pretty helpful from a design point of view:
 
@@ -41,3 +41,8 @@ Formal Abstract
 ^^^^^^^^^^^^^^^
 
 Mathematics is closely related to daily life, but it is also one of the lessons which often cause anxiety to primary school students. Digital game-based learning (DGBL) has been regarded as a sound learning strategy in raising learner willingness and interest in many disciplines. Thus, ways of designing a DGBL system to mitigate anxiety are well worth studying. This study adopts an Input–Process–Outcome DGBL model to develop a DGBL system with a diagnostic mechanism strategy for a primary school mathematics course. In addition to exploring the impact of different learning methods on learning performance, this study further analyzes the learning methods in terms of learner anxiety about mathematics, learning motivation and learning satisfaction from the perspective of Attention, Relevance, Confidence-building, and Satisfaction (ARCS) motivation theory. The diagnostic mechanism strategy demonstrates the advantages of the DGBL system for mathematics learning. During the learning process, the ARCS questionnaire revealed that students who engage in learning through the DGBL method are positively motivated. The findings of this study suggest that centering on the daily life experiences of learners, integrating a proper game model into mathematics learning and providing a diagnostic mechanism prompt can effectively enhance interest in learning mathematics and reduce anxiety. When anxiety is mitigated, both learning motivation and learning performance are enhanced.
+
+References
+^^^^^^^^^^
+
+#. Huang, Y. M., Huang, S. H., & Wu, T. T. (2013). Embedding diagnostic mechanisms in a digital game for learning mathematics. *Educational Technology Research and Development*, 1-21.

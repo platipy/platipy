@@ -46,5 +46,3 @@ Queued Research Papers
 #. Connected Learning
 
 #. How People Learn
-
-.. bibliography:: research/refs.bib

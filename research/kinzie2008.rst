@@ -1,7 +1,7 @@
 Gender in Middle School Educational Games
 -----------------------------------------
 
-**Title** : Gender differences in game activity preferences of middle school children: implications for educational game design :cite:`2008:kinzie`
+**Title** : Gender differences in game activity preferences of middle school children: implications for educational game design (Kinzie, 2008)
 
 **Summary** : This is one of my favorite papers. It describes a survey of 42 middle schoolers on their interest in game mechanics and elements. Demographic details:
 
@@ -96,3 +96,8 @@ Formal Abstract
 ^^^^^^^^^^^^^^^
 
 Educators and learning theorists suggest that play is one of the most important venues for learning, and games a useful educational tool. This study considers game activity preferences of middle school-aged children, so that educational games might be made more appealing to them. Based on children’s activity modes identified in our prior research, we developed the Educational Game Preferences Survey, which collects information on children’s preferences for play activity modes, their attitudes about each activity mode, and their preferences for game characters, settings, and forms of help. Survey results suggest the appeal of the Explorative mode of play for all children, especially girls. Gender differences in children’s preferences and attitudes for Active, Strategic, and Creative play modes were also found. We close with recommendations for game design to appeal to both boys and girls, as well as for boys and girls individually, to build engagement and hopefully lead to learning.
+
+References
+^^^^^^^^^^
+
+#. Kinzie, M. B., & Joseph, D. R. (2008). Gender differences in game activity preferences of middle school children: implications for educational game design. *Educational Technology Research and Development*, 56(5-6), 643-663.
