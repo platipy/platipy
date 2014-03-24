@@ -6,7 +6,12 @@ Educational Game Design
 Research
 --------
 
-Math Video Game: ARCS and Diagnostics :cite:`2014:huang`
+.. toctree::
+    :maxdepth: 2
+
+    research/huang2014
+
+Math Video Game: ARCS and Diagnostics
 
 Gender in video games: Boy vs. Girls
 
@@ -45,5 +50,3 @@ Game Development tips (that one Master's thesis)
 Connected Learning
 
 How People Learn
-
-.. bibliography:: research/refs.bib
