@@ -15,15 +15,15 @@ Results
 
 * **Gender of their character** :
 
-  * 3 students wanted a "genderless alien"
+  * 7% students wanted a "genderless alien"
   * The rest wanted their own gender.
     
 * **Age of their character**: 
 
   * 64% wanted a slightly older character (13-20 years old)
   * 30% wanted a 20-30 year old
-  * No one wanted older
   * 8% wanted less than 13 years old
+  * No one wanted older than 30 years
   
 * **Build of male characters**:
 
@@ -50,11 +50,11 @@ Results
   * "Powerful government", "Neighborhood Bully": Appealed to no one
   
 * **Who would you want to save?**:
-  
+
+  * "People your own age": 43% overall (46% of boys)  
+  * "Young children": 33% overall (56% of boys)
   * "Adults": 14% overall
   * "Senior Citizens": 10% overall
-  * "People your own age": 43% overall (46% of boys)
-  * "Young children": 33% overall (56% of boys)
 
 * **What do you want to save?**:
 
@@ -71,8 +71,8 @@ Results
 * **What do you do when you're stuck?**:
   
   * "Methodically try different ways to solve the problem": 50%
-  * "Discovering the answer through trial and error": 14%
   * "Hints from a guide": 21%
+  * "Discovering the answer through trial and error": 14%
   * "Being given the answer": 14%
   
 Beyond these simple questions, they also asked students about *activity modes* (e.g., Explorative, Social, Creative, etc.,). They were looking at students general preferences between the modes and specific attitudes towards individual modes.
