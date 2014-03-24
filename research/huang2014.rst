@@ -18,7 +18,7 @@ This is a study where they made a multiple-choice activity with diagnostic feedb
 
 As I previously said, this is not a game: it's a multiple-choice activity. It isn't meant to *teach*, it's meant to be a low-stakes assessment with **diagnostic feedback**. They put some good work into identifying the mistakes that a student could make when doing addition ("diagnostics"). When they choose the wrong answer, they give feedback targeted to that student. Think of it like really good compiler errors - it can make or break your understanding of the error when you're just starting out! This is 
 
-They assessed 56 2nd graders (45% female) (Southern Taiwan). One group had the diagnostic element, the other was basically just answering multiple choice questions. Their results for their measures:
+They assessed 56-2nd graders (45% female) (Southern Taiwan). One group had the diagnostic element, the other was basically just answering multiple choice questions. Their results for their measures:
 
 * **Learning achievement questions from accredited textbooks** : students given the diagnostic feedback performed better than the students who didn't, both in comprehension and application type of questions.
 * **Mathematical anxiety** : diagnostic feedback students were a little less anxious
