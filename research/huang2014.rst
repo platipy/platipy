@@ -31,6 +31,8 @@ They assessed 56-2nd graders (45% female) (Southern Taiwan). One group had the d
 * Although this activity is more fun than a quiz, it is still not as much fun as a regular game - multiple-choice is a pretty boring
 * Only intended for assessment rather than actual learning.
 
+**The biggest take-away** : Feedback is *key* in designing both software and instruction!
+
 Formal Abstract
 ^^^^^^^^^^^^^^^
 
