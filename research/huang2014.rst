@@ -16,7 +16,7 @@ This is a study where they made a multiple-choice activity with diagnostic feedb
     :alt: Embedding diagnostic mechanisms in a digital game for learning mathematics
     :target: http://dx.doi.org/10.1007/s11423-013-9315-4
 
-As I previously said, this is not a game: it's a multiple-choice activity. It isn't meant to *teach*, it's meant to be a low-stakes assessment with **diagnostic feedback**. They put some good work into identifying the mistakes that a student could make when doing addition ("diagnostics"). When they choose the wrong answer, they give feedback targeted to that student. Think of it like really good compiler errors - it can make or break your understanding of the error when you're just starting out! This is 
+As I previously said, this is not a game: it's a multiple-choice activity. It isn't meant to *teach*, it's meant to be a low-stakes assessment with **diagnostic feedback**. They put some good work into identifying the mistakes that a student could make when doing addition ("diagnostics"). When they choose the wrong answer, they give feedback targeted to that student. Think of it like really good compiler errors - it can make or break your understanding of the error when you're just starting out!
 
 They assessed 56-2nd graders (45% female) (Southern Taiwan). One group had the diagnostic element, the other was basically just answering multiple choice questions. Their results for their measures:
 
