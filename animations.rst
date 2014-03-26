@@ -84,7 +84,7 @@ Or for running through a sequence of images:
     
     filenames = ["walk0.png", "walk1.png", "walk2.png"]
     images = [spyral.Image(filename=f) for f in filenames]
-    animation = Animation('visible', easing.Iterate(images), duration = 1.5)
+    animation = Animation('image', easing.Iterate(images), duration = 1.5)
 
 You can even iterate over your own custom variable. If you had a happiness level for your sprite, you might make it fluctuate between -10 and 10 by:
 
