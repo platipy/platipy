@@ -19,6 +19,8 @@ Queued Research Papers
 
 #. Exogenous & Endogenous Games
 
+#. Evidence-Centered Design
+
 #. Acquisition vs. Participation Metaphors for Knowledge
 
 #. Game Development Design Principles (Gelderblom's Masters thesis)
