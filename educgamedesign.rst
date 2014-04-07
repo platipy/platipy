@@ -11,13 +11,11 @@ Research
 
     research/huang2014
     research/kinzie2008
+    research/charsky2008
+    research/squire2006
 
 Queued Research Papers
 ----------------------
-
-#. Off-the-shelf video games in the classroom
-
-#. Exogenous & Endogenous Games
 
 #. Acquisition vs. Participation Metaphors for Knowledge
 
