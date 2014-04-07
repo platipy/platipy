@@ -10,58 +10,66 @@ Results
 
 In Exogenous games, the learning context is external to the gameplay, as opposed to interalized like in Endogenous games. They have a fantastic table that goes into more depth on the differences:
 
+
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Learner is...       | An empty receptacle. An example is Math Blaster, where the learner is "motivated" to learn a prescribed set of skills and facts.                 | An active, sense-making, social organism. An example is Grand Theft Auto, where the learner brings existing identities and experiences that color interpretations of the game experience.                                                                                                        |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Knowledge is...     | Knowledge of discrete facts. The facts are "true" by authority (generally the authority of the game designer).                                   | Tool set used to solve problems. The right answer in Civilization is that which is efficacious for solving problems in the game world.                                                                                                                                                           |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Learning is...      | Memorizing. Learners reproduce a set of prescribed facts, such as mathematics tables.                                                            | Doing, experimenting, discovering for the purposes of action in the world. Players learn in role-playing games for the purposes of acting within an identity.                                                                                                                                    |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Instruction is...   | Transmission. The goal of a drill and practice game is to transmit information effectively and to "train" a set of desired responses.            | Making meaning/construction, discovery, social negotiation process. Instruction in Supercharged! involves creating a set of well designed experiences that elicit identities and encourage learners to confront existing beliefs, perform skills in context, and reﬂect on their understandings. |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Social model is...  | "Claustrophobic." Players are expected to solve problems alone; using outside resources is                                                       | Fundamentally group oriented. Games are designed to be played collectively, in affinity groups, and distributed across multiple media. They are designed with complexity to spawn affinity groups and communities that support game play.                                                        |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Pre-knowledge is... | Set of facts, knowledge, and skills to be assessed for proper pacing. In Math Blaster, players' self-efficacy in mathematics is not addressed.   | Knowledge to be leveraged, played upon. Pre-knowledge is expected to color perception, ideas, and strategies. In Environmental Detectives, challenges are structured so that players become increasingly competent and learn to see the value of mathematics.                                    |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Identity is...      | Something to be cajoled. If players are not "motivated" to do math, the game developer’s job is to create an "exciting" context for the learner. | Something to be recruited, managed, built over time. In Environmental Detectives, learners develop identities as scientists.                                                                                                                                                                     |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Context is...       | A motivational wrapper. The context in Math Blaster is something to make learning more palatable                                                 | The "content" of the experience. In Civilization, the geographical-materialist game model is the argument that situates activity and drives learning.                                                                                                                                            |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Learner is...
-Knowledge is...
-Learning is...
-Instruction is...
-Social model is...
-Pre-knowledge is...
-Identity is...
-Context is...
+* **Learner is...**
 
-An empty receptacle. An example is Math Blaster, where the learner is "motivated" to learn a prescribed set of skills and facts.
+    * **Exogenous**: An empty receptacle. An example is Math Blaster, where the learner is "motivated" to learn a prescribed set of skills and facts.
+    * **Endogenous**: An active, sense-making, social organism. An example is Grand Theft Auto, where the learner brings existing identities and experiences that color interpretations of the game experience.
 
-Knowledge of discrete facts. The facts are "true" by authority (generally the authority of the game designer).
+* **Knowledge is...**
 
-Memorizing. Learners reproduce a set of prescribed facts, such as mathematics tables.
+    * **Exogenous**: Knowledge of discrete facts. The facts are "true" by authority (generally the authority of the game designer).
+    * **Endogenous**: Tool set used to solve problems. The right answer in Civilization is that which is efficacious for solving problems in the game world.
 
-Transmission. The goal of a drill and practice game is to transmit information effectively and to "train" a set of desired responses.
+* **Learning is...**
 
-"Claustrophobic." Players are expected to solve problems alone; using outside resources is  generally "cheating."
+    * **Exogenous**: Memorizing. Learners reproduce a set of prescribed facts, such as mathematics tables.
+    * **Endogenous**: Doing, experimenting, discovering for the purposes of action in the world. Players learn in role-playing games for the purposes of acting within an identity.
 
-Set of facts, knowledge, and skills to be assessed for proper pacing. In Math Blaster, players' self-efficacy in mathematics is not addressed.
+* **Instruction is...**
 
-Something to be cajoled. If players are not "motivated" to do math, the game developer’s job is to create an "exciting" context for the learner.
+    * **Exogenous**: Transmission. The goal of a drill and practice game is to transmit information effectively and to "train" a set of desired responses.
+    * **Endogenous**: Making meaning/construction, discovery, social negotiation process. Instruction in Supercharged! involves creating a set of well designed experiences that elicit identities and encourage learners to confront existing beliefs, perform skills in context, and reﬂect on their understandings.
 
-A motivational wrapper. The context in Math Blaster is something to make learning more palatable
+* **Social model is...**
+
+    * **Exogenous**: "Claustrophobic." Players are expected to solve problems alone; using outside resources is  generally "cheating."
+    * **Endogenous**: Fundamentally group oriented. Games are designed to be played collectively, in affinity groups, and distributed across multiple media. They are designed with complexity to spawn affinity groups and communities that support game play.
+
+* **Pre-knowledge is...**
+
+    * **Exogenous**: Set of facts, knowledge, and skills to be assessed for proper pacing. In Math Blaster, players' self-efficacy in mathematics is not addressed.
+    * **Endogenous**: Knowledge to be leveraged, played upon. Pre-knowledge is expected to color perception, ideas, and strategies. In Environmental Detectives, challenges are structured so that players become increasingly competent and learn to see the value of mathematics.
+
+* **Identity is...**
+
+    * **Exogenous**: Something to be cajoled. If players are not "motivated" to do math, the game developer’s job is to create an "exciting" context for the learner.
+    * **Endogenous**: Something to be recruited, managed, built over time. In Environmental Detectives, learners develop identities as scientists.
+
+* **Context is...**
+
+    * **Exogenous**: A motivational wrapper. The context in Math Blaster is something to make learning more palatable
+    * **Endogenous**: The "content" of the experience. In Civilization, the geographical-materialist game model is the argument that situates activity and drives learning.
 
 
-
-An active, sense-making, social organism. An example is Grand Theft Auto, where the learner brings existing identities and experiences that color interpretations of the game experience.
-
-Tool set used to solve problems. The right answer in Civilization is that which is efficacious for solving problems in the game world.
-
-Doing, experimenting, discovering for the purposes of action in the world. Players learn in role-playing games for the purposes of acting within an identity.
-
-Making meaning/construction, discovery, social negotiation process. Instruction in Supercharged! involves creating a set of well designed experiences that elicit identities and encourage learners to confront existing beliefs, perform skills in context, and reﬂect on their understandings.
-
-Fundamentally group oriented. Games are designed to be played collectively, in affinity groups, and distributed across multiple media. They are designed with complexity to spawn affinity groups and communities that support game play.
-
-Knowledge to be leveraged, played upon. Pre-knowledge is expected to color perception, ideas, and strategies. In Environmental Detectives, challenges are structured so that players become increasingly competent and learn to see the value of mathematics.
-
-Something to be recruited, managed, built over time. In Environmental Detectives, learners develop identities as scientists.
-
-The "content" of the experience. In Civilization, the geographical-materialist game model is the argument that situates activity and drives learning.
 
 
 My Thoughts
