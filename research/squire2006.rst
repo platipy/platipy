@@ -8,7 +8,7 @@ Endogenous vs. Exogenous Games
 Results
 ^^^^^^^
 
-In Exogenous games, the learning context is external to the gameplay, as opposed to interalized like in Endogenous games. They have a fantastic table that goes into more depth on the differences:
+In Exogenous games, the learning context is external to the gameplay, as opposed to internalized like in Endogenous games. The article breaks this down further by contrasting the two terms:
 
 * **Learner is...**
 
@@ -67,4 +67,4 @@ References
 
 .. rubric:: Footnotes
 
-.. [#civ] Designed Experiences are semi-controlled experiences for students that fits with the "learning by doing" metaphor - that is, people learn when they actively are doing something. The text gives a great example of this phenomenon when teaching students history via Civilization III. The students were playing as land-starved European countries that needed more resources in order to fight their wars; the natural solution was to develop colonies in the Africas and Americas and exploiting those resources. This mimics via gameplay decisions the same route as history took, and launched some neat class discussions on the motivations of colonization. Designed Experiences are a very cool way to teach, so this article might get a follow-up blog post to really explore the concept!
+.. [#civ] Designed Experiences are semi-controlled experiences for students that fits with the "learning by doing" metaphor - that is, people learn when they actively are doing something. The text gives a great example of this phenomenon when teaching students history via Civilization III. The students were playing as land-starved European countries that needed more resources in order to fight their wars; the natural solution was to develop colonies in the Africas and Americas and exploiting those resources. These gameplay decisions mimick the same route that history took, and launched some neat class discussions on the motivations of colonization. Designed Experiences are a very cool way to teach, so this article might get a follow-up blog post to really explore the concept!
