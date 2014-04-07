@@ -17,6 +17,8 @@ Research
 Queued Research Papers
 ----------------------
 
+#. Evidence-Centered Design
+
 #. Acquisition vs. Participation Metaphors for Knowledge
 
 #. Game Development Design Principles (Gelderblom's Masters thesis)
