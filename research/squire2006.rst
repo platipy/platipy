@@ -28,7 +28,7 @@ In Exogenous games, the learning context is external to the gameplay, as opposed
 * **Instruction is...**
 
     * **Exogenous**: Transmission. The goal of a drill and practice game is to transmit information effectively and to "train" a set of desired responses.
-    * **Endogenous**: Making meaning/construction, discovery, social negotiation process. Instruction in Supercharged! involves creating a set of well designed experiences that elicit identities and encourage learners to confront existing beliefs, perform skills in context, and reﬂect on their understandings.
+    * **Endogenous**: Making meaning/construction, discovery, social negotiation process. Instruction in Supercharged! involves creating a set of well designed experiences that elicit identities and encourage learners to confront existing beliefs, perform skills in context, and reflect on their understandings.
 
 * **Social model is...**
 
@@ -42,7 +42,7 @@ In Exogenous games, the learning context is external to the gameplay, as opposed
 
 * **Identity is...**
 
-    * **Exogenous**: Something to be cajoled. If players are not "motivated" to do math, the game developer’s job is to create an "exciting" context for the learner.
+    * **Exogenous**: Something to be cajoled. If players are not "motivated" to do math, the game developer's job is to create an "exciting" context for the learner.
     * **Endogenous**: Something to be recruited, managed, built over time. In Environmental Detectives, learners develop identities as scientists.
 
 * **Context is...**
@@ -58,7 +58,7 @@ My Thoughts
 Formal Abstract
 ^^^^^^^^^^^^^^^
 
-Interactive immersive entertainment, or videogame playing, has emerged as a major entertainment and educational medium. As research and development initiatives proliferate, educational researchers might benefit by developing more grounded theories about them. This article argues for framing game play as a designed experience. Players’ understandings are developed through cycles of performance within the gameworlds, which instantiate particular theories of the world (ideological worlds). Players develop new identities both through game play and through the gaming communities in which these identities are enacted. Thus research that examines game-based learning needs to account for both kinds of interactions within the game-world and in broader social contexts. Examples from curriculum developed for Civilization III and Supercharged! show how games can communicate powerful ideas and open new identity trajectories for learners.
+Interactive immersive entertainment, or videogame playing, has emerged as a major entertainment and educational medium. As research and development initiatives proliferate, educational researchers might benefit by developing more grounded theories about them. This article argues for framing game play as a designed experience. Players' understandings are developed through cycles of performance within the gameworlds, which instantiate particular theories of the world (ideological worlds). Players develop new identities both through game play and through the gaming communities in which these identities are enacted. Thus research that examines game-based learning needs to account for both kinds of interactions within the game-world and in broader social contexts. Examples from curriculum developed for Civilization III and Supercharged! show how games can communicate powerful ideas and open new identity trajectories for learners.
 
 References
 ^^^^^^^^^^
@@ -67,4 +67,4 @@ References
 
 .. rubric:: Footnotes
 
-.. [#civ] Designed Experiences are semi-controlled experiences for students that fits with the "learning by doing" metaphor - that is, people learn when they actively are doing something. The text gives a great example of this phenomenon when teaching students history via Civilization III. The students were playing as land-starved European countries that needed more resources in order to fight their wars; the natural solution was to develop colonies in the Africas and Americas and exploiting those resources. These gameplay decisions mimick the same route that history took, and launched some neat class discussions on the motivations of colonization. Designed Experiences are a very cool way to teach, so this article might get a follow-up blog post to really explore the concept!
+.. [#civ] Designed Experiences are semi-controlled experiences for students that fits with the "learning by doing" metaphor - that is, people learn when they actively are doing something. The text gives a great example of this phenomenon when teaching students history via Civilization III. The students were playing as land-starved European countries that needed more resources in order to fight their wars; the natural solution was to develop colonies in the Africas and Americas and exploiting those resources. These gameplay decisions mimic the same route that history took, and launched some neat class discussions on the motivations of colonization. Designed Experiences are a very cool way to teach, so this article might get a follow-up blog post to really explore the concept!
