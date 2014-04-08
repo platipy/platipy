@@ -2,7 +2,7 @@ Latest Versions
 ===============
 
 The latest version of Example.activity is v0.3.
-The latest version of spyral is v0.9.
+The latest version of spyral is v0.9.6
 
 .. _downloads:
 
@@ -16,6 +16,12 @@ To update spyral to a newer version than the one included with your launcher, re
 
 Old Versions
 ~~~~~~~~~~~~
+* :download:`Download Spyral v0.9.6 <files/spyral-0.9.6.zip>`_
+* :download:`Download Spyral v0.9.5 <files/spyral-0.9.5.zip>`_
+* :download:`Download Spyral v0.9.4 <files/spyral-0.9.4.zip>`_
+* :download:`Download Spyral v0.9.3 <files/spyral-0.9.3.zip>`_
+* :download:`Download Spyral v0.9.2 <files/spyral-0.9.2.zip>`_
+* :download:`Download Spyral v0.9.1 <files/spyral-0.9.1.zip>`_
 * `Download spyral v0.2 <https://github.com/rdeaton/spyral/zipball/v0.2>`_
 * `Download spyral v0.1.1 <https://github.com/rdeaton/spyral/zipball/v0.1.1>`_
 * `Download spyral v0.1 <https://github.com/rdeaton/spyral/zipball/v0.1>`_
@@ -37,8 +43,33 @@ Changelogs
 Spyral
 ------
 
-v0.2.1 - In Progress (Changes available in git)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+v0.9.6
+~~~~~~
+* [sprites] Fixed killing a sprite clobbering other events
+* [animations] Fixed animations not firing the right events
+* [core] Fixed error message being triggered when game ends ("spyral.quit cannot be found")
+
+v0.9.5
+~~~~~~
+* [collision] Fixed collision detection for forms (e.g., buttons, text input) and sprites when the dev-launcher is scaled
+* [forms] Fixed using tabs to navigate forms crashing the game
+* [mouse] Fixed mouse motion reporting the accurately scaled position
+* [forms] Enhanced error message for declaring forms.
+
+v0.9.4
+~~~~~~
+* [mouse] Fix mouse coordinates in mouse events being incorrect with dev-launcher's scaling
+* [scene] Fix background image not updating on the screen even after it's been initially set
+* [events] Fix Minimizing your window and then maximizing no longer crashes with an event error
+
+v0.9.0
+~~~~~~
+* Massive, massive changes to the Spyral API
+* New classes like Views, Actors, etc.
+* Basicallly, it's a whole new system
+
+v0.2.1
+~~~~~~
 * [animation] Fix a logic bug in animations that would cause them to not catch an exception they should
 * [camera] Fix a broken return value on camera.get_rect()
 * [docs] Fix a documentation bug which used the wrong terminology
@@ -135,4 +166,8 @@ v0.1 - 09/18/2012
 Contact Developers / Submit Changes
 ===================================
 
-If there is a bug in spyral or Example.activity, you can e-mail rdeaton@udel.edu to notify me directly, submit a ticket on github, or send a pull request.
+If there is a bug in spyral or Example.activity, please do one of the following:
+
+* `open a ticket <https://github.com/platipy/spyral/issues/new>`_ on our github,
+* e-mail rdeaton@platipy.org and acbart@vt.edu to notify the authors directly, or
+* send a pull request
