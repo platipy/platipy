@@ -18,6 +18,8 @@ News
 ----
 .. toctree::
     :maxdepth: 1
+    
+    news
 
 Building Games
 --------------
