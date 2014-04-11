@@ -12,7 +12,7 @@ Platipy Project
 
 .. image:: images/platipy-big.png
 
-The platipy project is an effort to document efforts to build a game in Python and spyral for the OLPC XO. Read the introduction if you're interested in the motivation and some details behind choices made, or skip right to the guide if you're ready to start programming.
+The platipy project is an effort to document efforts to build a game in Python and Spyral for the OLPC XO (and other platforms, such as Windows, Mac, and the Raspberry Pi). Spyral is a library/engine for developing 2D games in Python 2.X, with a focus in rapid development and clean design. Any system that runs Pygame should be able to run Spyral. Read the :ref:`introduction <intro>` if you're interested in the motivation and some details behind choices made, or skip right to the :ref:`guides <first_guide>` if you're ready to start programming.
 
 News
 ----

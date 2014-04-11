@@ -1,3 +1,5 @@
+.. _first_guide:
+
 Getting Started
 ===============
 
@@ -16,6 +18,7 @@ Mac
 #. Install pip
 #. Install greenlets
 #. Install pygame
+#. Install parsley
 #. :download:`Download Pong <files/Pong-ea1.0-sp0.9.1.zip>`
 
 Unix
