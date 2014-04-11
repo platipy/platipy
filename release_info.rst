@@ -16,12 +16,12 @@ To update spyral to a newer version than the one included with your launcher, re
 
 Old Versions
 ~~~~~~~~~~~~
-* :download:`Download Spyral v0.9.6 <files/spyral-0.9.6.zip>`_
-* :download:`Download Spyral v0.9.5 <files/spyral-0.9.5.zip>`_
-* :download:`Download Spyral v0.9.4 <files/spyral-0.9.4.zip>`_
-* :download:`Download Spyral v0.9.3 <files/spyral-0.9.3.zip>`_
-* :download:`Download Spyral v0.9.2 <files/spyral-0.9.2.zip>`_
-* :download:`Download Spyral v0.9.1 <files/spyral-0.9.1.zip>`_
+* :download:`Download Spyral v0.9.6 <files/spyral-0.9.6.zip>`
+* :download:`Download Spyral v0.9.5 <files/spyral-0.9.5.zip>`
+* :download:`Download Spyral v0.9.4 <files/spyral-0.9.4.zip>`
+* :download:`Download Spyral v0.9.3 <files/spyral-0.9.3.zip>`
+* :download:`Download Spyral v0.9.2 <files/spyral-0.9.2.zip>`
+* :download:`Download Spyral v0.9.1 <files/spyral-0.9.1.zip>`
 * `Download spyral v0.2 <https://github.com/rdeaton/spyral/zipball/v0.2>`_
 * `Download spyral v0.1.1 <https://github.com/rdeaton/spyral/zipball/v0.1.1>`_
 * `Download spyral v0.1 <https://github.com/rdeaton/spyral/zipball/v0.1>`_
