@@ -14,10 +14,10 @@ Platipy Project
 
 The platipy project is an effort to document efforts to build a game in Python and spyral for the OLPC XO. Read the introduction if you're interested in the motivation and some details behind choices made, or skip right to the guide if you're ready to start programming.
 
+News
+----
 .. toctree::
     :maxdepth: 1
-    
-    news
 
 Building Games
 --------------
